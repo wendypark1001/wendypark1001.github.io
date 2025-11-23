@@ -50,7 +50,7 @@ export function Projects() {
                   <p><span className="font-serif italic">Deliverables:</span> Social Media Posts, Promotional Posters, Brand Content</p>
                 </div>
               </div>
-              <div>
+              <div className="w-full mx-auto max-w-lg">
                 <ImageWithFallback
                   src="/assets/milktea1.jpeg"
                   alt="Assorted Signature Milk Teas from The Ceylon"
@@ -58,9 +58,9 @@ export function Projects() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
               {ceylonGalleryImages.map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[3/4]">
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[2/3]">
                   <ImageWithFallback
                     src={image.src}
                     alt={image.alt}
