@@ -18,6 +18,10 @@ export function Projects() {
       src: "/assets/milktea5.jpeg",
       alt: "The Ceylon promotional milk tea set",
     },
+    {
+      src: "/assets/milktea6.jpeg",
+      alt: "The Ceylon signature layered milk tea",
+    },
   ];
   const mpmpGalleryImages = [
     {
@@ -70,7 +74,7 @@ export function Projects() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
               {ceylonGalleryImages.map((image) => (
                 <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[2/3]">
                   <ImageWithFallback

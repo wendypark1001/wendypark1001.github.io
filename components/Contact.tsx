@@ -21,11 +21,9 @@ export function Contact() {
     <section id="contact" className="py-20 px-4 bg-[#F5F1E8]">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-serif italic text-center mb-4" style={{ fontSize: '2.5rem' }}>
-          LET'S WORK TOGETHER
+          CONTACT
         </h2>
-        <p className="text-center text-sm text-neutral-600 mb-12">
-          Available for marketing projects, creative collaborations, and brand partnerships
-        </p>
+        <div className="mb-12" />
         
         <div className="grid md:grid-cols-2 gap-12">
           <div>
@@ -36,7 +34,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-wider mb-1">Email</p>
-                  <p className="font-serif">wendy.park@student.unimelb.edu.au</p>
+                  <p className="font-serif">wendy.park1001@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -45,7 +43,14 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-wider mb-1">LinkedIn</p>
-                  <p className="font-serif">linkedin.com/in/wendy-park</p>
+                  <a
+                    href="https://www.linkedin.com/in/wendy-park-47b563267"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-serif underline decoration-[#C4A57B] decoration-2"
+                  >
+                    www.linkedin.com/in/wendy-park-47b563267
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -60,11 +65,15 @@ export function Contact() {
             </div>
 
             <div className="bg-white p-6">
-              <h4 className="font-serif italic mb-3">Services</h4>
+              <h4 className="font-serif italic mb-3">Strengths</h4>
               <ul className="text-sm space-y-2">
                 <li className="flex items-start gap-2">
                   <span className="text-[#C4A57B]">→</span>
-                  <span>Social Media Content & Strategy</span>
+                  <span>Community Engagement & Events</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-[#C4A57B]">→</span>
+                  <span>Social Media Content</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-[#C4A57B]">→</span>
@@ -73,10 +82,6 @@ export function Contact() {
                 <li className="flex items-start gap-2">
                   <span className="text-[#C4A57B]">→</span>
                   <span>Brand Marketing & Campaigns</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-[#C4A57B]">→</span>
-                  <span>Community Engagement & Events</span>
                 </li>
               </ul>
             </div>
