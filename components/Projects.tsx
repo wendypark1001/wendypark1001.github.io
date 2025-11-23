@@ -1,6 +1,4 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import ceylonImage1 from "figma:asset/d76f4fce3d8e9190bdfe72b501bd266f2050c3fa.png";
-import ceylonImage2 from "figma:asset/c55eec31d3d2cac6d09cc20aea65b5f8e076dec2.png";
 
 export function Projects() {
   return (
@@ -35,7 +33,7 @@ export function Projects() {
               </div>
               <div>
                 <ImageWithFallback
-                  src={ceylonImage1}
+                  src="/assets/ceylon-image1.png"
                   alt="The Ceylon - Fresh Oven-Baked Scones Promotion"
                   className="w-full h-auto"
                 />
@@ -44,7 +42,7 @@ export function Projects() {
             <div className="grid md:grid-cols-3 gap-6">
               <div className="md:col-span-1">
                 <ImageWithFallback
-                  src={ceylonImage2}
+                  src="/assets/ceylon-image2.png"
                   alt="The Ceylon - Milk Tea and Bakery"
                   className="w-full h-auto"
                 />
