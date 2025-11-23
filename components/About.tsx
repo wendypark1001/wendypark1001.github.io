@@ -4,7 +4,7 @@ const profileImage = new URL("../assets/imageofmyself.jpeg", import.meta.url).hr
 
 export function About() {
   return (
-    <section id="about" className="py-16 px-4 bg-black text-white">
+    <section id="about" className="py-16 px-4 bg-[#3A2B1C] text-white">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>

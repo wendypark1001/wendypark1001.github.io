@@ -19,6 +19,20 @@ export function Projects() {
       alt: "The Ceylon promotional milk tea set",
     },
   ];
+  const mpmpGalleryImages = [
+    {
+      src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&h=300&fit=crop",
+      alt: "Student panel",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=300&fit=crop",
+      alt: "Peer mentoring",
+    },
+    {
+      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&h=300&fit=crop",
+      alt: "University event",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -74,16 +88,16 @@ export function Projects() {
 
         {/* University Promotional Content */}
         <div className="mb-20">
-          <div className="bg-black text-white p-8 md:p-12">
-            <h3 className="font-serif italic text-3xl mb-4 text-center">University Promotional Content</h3>
-            <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-8 text-center">
-              Melbourne Peer Mentor Program
-            </p>
-            <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="bg-white p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <div>
+                <h3 className="font-serif italic text-3xl mb-4">University Promotional Content</h3>
+                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                  Melbourne Peer Mentor Program
+                </p>
                 <p className="text-sm leading-relaxed mb-4">
-                  Featured in promotional videos and marketing materials for the University of Melbourne's 
-                  Melbourne Peer Mentor Program (MPMP). Participated in vox pop interviews and student 
+                  Featured in promotional videos and marketing materials for the University of Melbourne&apos;s
+                  Melbourne Peer Mentor Program (MPMP). Participated in vox pop interviews and student
                   panel discussions showcased across university newsletters, LinkedIn, and Instagram.
                 </p>
                 <div className="space-y-2 text-sm">
@@ -92,7 +106,7 @@ export function Projects() {
                   <p><span className="font-serif italic">Impact:</span> Supporting first-year student transition and community building</p>
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="w-full mx-auto max-w-lg">
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
                   alt="MPMP promotional filming"
@@ -100,22 +114,16 @@ export function Projects() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-4">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&h=300&fit=crop"
-                alt="Student panel"
-                className="w-full h-48 object-cover"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=300&fit=crop"
-                alt="Peer mentoring"
-                className="w-full h-48 object-cover"
-              />
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&h=300&fit=crop"
-                alt="University event"
-                className="w-full h-48 object-cover"
-              />
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              {mpmpGalleryImages.map((image) => (
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[2/3]">
+                  <ImageWithFallback
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
