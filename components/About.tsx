@@ -1,5 +1,7 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
+const profileImage = new URL("../assets/imageofmyself.jpeg", import.meta.url).href;
+
 export function About() {
   return (
     <section id="about" className="py-16 px-4 bg-black text-white">
@@ -27,7 +29,7 @@ export function About() {
           </div>
           <div>
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=700&fit=crop"
+              src={profileImage}
               alt="Wendy Park"
               className="w-full h-auto"
             />
