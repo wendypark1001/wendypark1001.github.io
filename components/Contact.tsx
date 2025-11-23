@@ -13,7 +13,11 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! I'll get back to you soon.");
+    const subject = encodeURIComponent(`New Inquiry from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:wendy.park1001@gmail.com?subject=${subject}&body=${body}`;
     setFormData({ name: "", email: "", message: "" });
   };
 
@@ -96,7 +100,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
-                  className="border-black bg-[#F5F1E8]"
+                  className="border-black bg-[#F5F1E8] text-sm"
                 />
               </div>
               <div>
@@ -106,20 +110,20 @@ export function Contact() {
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
-                  className="border-black bg-[#F5F1E8]"
+                  className="border-black bg-[#F5F1E8] text-sm"
                 />
               </div>
               <div>
                 <Textarea
-                  placeholder="Tell me about your project"
+                  placeholder="Enter your message. Clicking ‘Send Message’ below will open your email client to complete and send the email."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
                   rows={5}
-                  className="border-black bg-[#F5F1E8]"
+                  className="border-black bg-[#F5F1E8] text-sm"
                 />
               </div>
-              <Button type="submit" className="w-full bg-black hover:bg-neutral-800">
+              <Button type="submit" className="w-full bg-white text-black border border-black hover:bg-neutral-100">
                 SEND MESSAGE
               </Button>
             </form>
