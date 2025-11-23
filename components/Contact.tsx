@@ -38,7 +38,12 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-wider mb-1">Email</p>
-                  <p className="font-serif">wendy.park1001@gmail.com</p>
+                  <a
+                    href="mailto:wendy.park1001@gmail.com"
+                    className="font-serif underline decoration-[#C4A57B] decoration-2"
+                  >
+                    wendy.park1001@gmail.com
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">

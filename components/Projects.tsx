@@ -25,16 +25,21 @@ export function Projects() {
   ];
   const mpmpGalleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=300&h=300&fit=crop",
-      alt: "Student panel",
+      src: "/assets/uni2.jpeg",
+      alt: "University promotional panel showcase",
     },
     {
-      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=300&h=300&fit=crop",
-      alt: "Peer mentoring",
+      src: "/assets/uni3.JPG",
+      alt: "Academic mentoring promotional board",
+      focusLeft: true,
     },
     {
-      src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=300&h=300&fit=crop",
-      alt: "University event",
+      src: "/assets/uni4.jpeg",
+      alt: "Student testimonials for MPMP",
+    },
+    {
+      src: "/assets/uni5.JPG",
+      alt: "Campus display for mentoring initiatives",
     },
   ];
 
@@ -74,9 +79,9 @@ export function Projects() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
               {ceylonGalleryImages.map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[2/3]">
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[3/4]">
                   <ImageWithFallback
                     src={image.src}
                     alt={image.alt}
@@ -108,19 +113,24 @@ export function Projects() {
               </div>
               <div className="w-full mx-auto max-w-lg">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop"
-                  alt="MPMP promotional filming"
+                  src="/assets/uni1.JPG"
+                  alt="University of Melbourne MPMP promotional display"
                   className="w-full h-auto"
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
               {mpmpGalleryImages.map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[2/3]">
+                <div
+                  key={image.src}
+                  className="w-full overflow-hidden rounded-lg aspect-[3/4]"
+                >
                   <ImageWithFallback
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${
+                      image.focusLeft ? "object-left" : ""
+                    }`}
                   />
                 </div>
               ))}
