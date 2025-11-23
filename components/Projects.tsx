@@ -1,6 +1,25 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
+  const ceylonGalleryImages = [
+    {
+      src: "/assets/milktea2.jpeg",
+      alt: "The Ceylon classic blend milk tea",
+    },
+    {
+      src: "/assets/milktea3.jpeg",
+      alt: "The Ceylon seasonal milk tea lineup",
+    },
+    {
+      src: "/assets/milktea4.jpeg",
+      alt: "The Ceylon pearl milk tea close-up",
+    },
+    {
+      src: "/assets/milktea5.jpeg",
+      alt: "The Ceylon promotional milk tea set",
+    },
+  ];
+
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
       <div className="max-w-7xl mx-auto">
@@ -33,32 +52,22 @@ export function Projects() {
               </div>
               <div>
                 <ImageWithFallback
-                  src="/assets/ceylon-image1.png"
-                  alt="The Ceylon - Fresh Oven-Baked Scones Promotion"
+                  src="/assets/milktea1.jpeg"
+                  alt="Assorted Signature Milk Teas from The Ceylon"
                   className="w-full h-auto"
                 />
               </div>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="md:col-span-1">
-                <ImageWithFallback
-                  src="/assets/ceylon-image2.png"
-                  alt="The Ceylon - Milk Tea and Bakery"
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="md:col-span-2 grid grid-cols-2 gap-6">
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1559305616-3369e6f1f6e2?w=400&h=500&fit=crop"
-                  alt="Ceylon cafe interior"
-                  className="w-full h-full object-cover"
-                />
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=500&fit=crop"
-                  alt="Ceylon menu design"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {ceylonGalleryImages.map((image) => (
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[3/4]">
+                  <ImageWithFallback
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
