@@ -111,12 +111,20 @@ export function Projects() {
                   <p><span className="font-serif italic">Impact:</span> Supporting first-year student transition and community building</p>
                 </div>
               </div>
-              <div className="w-full mx-auto max-w-lg">
+              <div className="w-full mx-auto max-w-lg relative">
                 <ImageWithFallback
                   src="/assets/uni1.JPG"
                   alt="University of Melbourne MPMP promotional display"
                   className="w-full h-auto"
                 />
+                <a
+                  href="https://students.unimelb.edu.au/student-life/academic-mentoring"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute left-1/2 top-1/2 flex h-1/2 w-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/0 transition hover:bg-black/10 focus-visible:bg-black/15"
+                >
+                  <span className="sr-only">Learn more about the Academic Mentoring program</span>
+                </a>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
