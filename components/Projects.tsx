@@ -59,8 +59,6 @@ export function Projects() {
                   brand presence and attract customers.
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Role:</span> Marketing Assistant (Remote)</p>
-                  <p><span className="font-serif italic">Duration:</span> Jun 2024 - Apr 2025</p>
                   <p><span className="font-serif italic">Deliverables:</span> Social Media Posts, Promotional Posters, Brand Content</p>
                 </div>
               </div>
@@ -93,16 +91,14 @@ export function Projects() {
               <div>
                 <h3 className="font-serif italic text-3xl mb-4">University Promotional Content</h3>
                 <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
-                  Melbourne Peer Mentor Program
+                  MELBOURNE PEER MENTOR PROGRAM (MPMP) & ACADEMIC MENTORING
                 </p>
                 <p className="text-sm leading-relaxed mb-4">
-                  Featured in promotional videos and marketing materials for the University of Melbourne&apos;s
-                  Melbourne Peer Mentor Program (MPMP). Participated in vox pop interviews and student
-                  panel discussions showcased across university newsletters, LinkedIn, and Instagram.
+                  Featured in promotional videos and marketing materials for the University of Melbourne&apos;s MPMP and Academic Mentoring programs.
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Platforms:</span> Bachelor of Commerce Newsletter, LinkedIn, Instagram</p>
-                  <p><span className="font-serif italic">Content:</span> Video Interviews, Panel Discussions, Student Stories</p>
+                  <p><span className="font-serif italic">Platforms:</span> Building Display Boards, Newsletter, LinkedIn, Instagram</p>
+                  <p><span className="font-serif italic">Content:</span> Video Interviews, Vox pop Interviews, Panel Discussions, Student Stories, Reels promotion</p>
                   <p><span className="font-serif italic">Impact:</span> Supporting first-year student transition and community building</p>
                 </div>
               </div>
