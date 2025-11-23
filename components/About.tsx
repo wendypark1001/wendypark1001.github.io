@@ -9,7 +9,7 @@ export function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-serif italic mb-6" style={{ fontSize: '2.5rem', lineHeight: '1.2' }}>
-              About
+              About me
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
