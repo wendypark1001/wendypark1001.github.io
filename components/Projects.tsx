@@ -42,6 +42,20 @@ export function Projects() {
       alt: "Campus display for mentoring initiatives",
     },
   ];
+  const clientPosterImages = [
+    {
+      src: "/assets/mom1.jpg",
+      alt: "Custom poster commission featuring floral typography",
+    },
+    {
+      src: "/assets/mom3.jpg",
+      alt: "Minimal pastel poster layout with custom lettering",
+    },
+    {
+      src: "/assets/mom2.jpg",
+      alt: "Bold typographic poster with hand-drawn accents",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -139,6 +153,47 @@ export function Projects() {
                     className={`w-full h-full object-cover ${
                       image.focusLeft ? "object-left" : ""
                     }`}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Client Posters */}
+        <div className="mb-20">
+          <div className="bg-white p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
+              <div>
+                <h3 className="font-serif italic text-3xl mb-4">Client Posters (Korean)</h3>
+                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                  Personalized Visual Storytelling
+                </p>
+                <p className="text-sm leading-relaxed mb-4">
+                  A bespoke trio of posters designed for a private commission. Each composition balances typography,
+                  illustration, and palette to create heartfelt keepsakes.
+                </p>
+                <div className="space-y-2 text-sm">
+                  <p><span className="font-serif italic">Scope:</span> Concept development, layout, art direction</p>
+                  <p><span className="font-serif italic">Status:</span> Completed delivery</p>
+                  <p><span className="font-serif italic">Deliverables:</span> Print-ready posters, digital files</p>
+                </div>
+              </div>
+              <div className="w-full mx-auto max-w-lg">
+                <ImageWithFallback
+                  src={clientPosterImages[0].src}
+                  alt={clientPosterImages[0].alt}
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              {clientPosterImages.slice(1).map((image) => (
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[3/4]">
+                  <ImageWithFallback
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
