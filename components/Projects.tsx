@@ -201,20 +201,7 @@ export function Projects() {
         </div>
 
         {/* Additional Projects Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-6">
-            <div className="mb-4 aspect-square bg-[#F5F1E8] flex items-center justify-center">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop"
-                alt="Social media campaign"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h4 className="font-serif italic text-xl mb-2">Social Media Campaigns</h4>
-            <p className="text-xs text-neutral-600 mb-3">Content strategy & engagement</p>
-            <p className="text-sm">Developing cohesive visual narratives across Instagram, creating on-brand content calendars, and driving audience engagement through storytelling.</p>
-          </div>
-
+        <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6">
             <div className="mb-4 aspect-square bg-[#F5F1E8] flex items-center justify-center">
               <ImageWithFallback
@@ -228,18 +215,6 @@ export function Projects() {
             <p className="text-sm">Created comprehensive learning materials and visual resources for elementary students in Cambodia, combining pedagogy with engaging design.</p>
           </div>
 
-          <div className="bg-white p-6">
-            <div className="mb-4 aspect-square bg-[#F5F1E8] flex items-center justify-center">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=400&fit=crop"
-                alt="Event materials"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h4 className="font-serif italic text-xl mb-2">Event Marketing</h4>
-            <p className="text-xs text-neutral-600 mb-3">University engagement initiatives</p>
-            <p className="text-sm">Promotional materials and communication strategies for student orientation, mentoring programs, and community engagement events.</p>
-          </div>
         </div>
       </div>
     </section>
