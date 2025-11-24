@@ -175,7 +175,6 @@ export function Projects() {
                 </p>
                 <div className="space-y-2 text-sm">
                   <p><span className="font-serif italic">Scope:</span> Concept development, layout, art direction</p>
-                  <p><span className="font-serif italic">Status:</span> Completed delivery</p>
                   <p><span className="font-serif italic">Deliverables:</span> Print-ready posters, digital files</p>
                 </div>
               </div>
