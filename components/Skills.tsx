@@ -65,7 +65,7 @@ export function Skills() {
         <div className="mt-16 text-center">
           <h3 className="font-serif italic text-xl mb-6">Tools</h3>
           <div className="flex flex-wrap justify-center gap-4">
-            {["Canva", "Social Media Platforms", "Instagram", "Facebook", "LinkedIn", "Cursor AI"].map((tool, index) => (
+            {["Canva", "Social Media Platforms", "Instagram", "Facebook", "LinkedIn", "Cursor AI", "Google Workspace"].map((tool, index) => (
               <span key={index} className="px-4 py-2 bg-[#F5F1E8] text-sm">
                 {tool}
               </span>
