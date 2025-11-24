@@ -200,6 +200,39 @@ export function Projects() {
           </div>
         </div>
 
+        {/* Projects - Upcoming */}
+        <div className="mb-20">
+          <div className="bg-white p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
+              <div>
+                <h3 className="font-serif italic text-3xl mb-4">Projects</h3>
+                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                  Coming soon
+                </p>
+                <p className="text-sm leading-relaxed mb-4">
+                  New featured work will be showcased here. Once final assets are delivered, this space will highlight
+                  the project narrative, objectives, and design solutions.
+                </p>
+                <div className="space-y-2 text-sm">
+                  <p><span className="font-serif italic">Scope:</span> Awaiting final brief and creative direction</p>
+                  <p><span className="font-serif italic">Deliverables:</span> To be confirmed</p>
+                  <p><span className="font-serif italic">Status:</span> Artwork in progress</p>
+                </div>
+              </div>
+              <div className="w-full mx-auto max-w-lg bg-[#F5F1E8] h-64 flex items-center justify-center text-center text-xs uppercase tracking-widest text-neutral-500">
+                Featured hero image coming soon
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+              {["Concept sketch", "Color study", "Typography exploration"].map((label) => (
+                <div key={label} className="w-full h-40 bg-[#F5F1E8] flex items-center justify-center text-[0.65rem] tracking-[0.3em] uppercase text-neutral-400">
+                  {label}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Additional Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6">
