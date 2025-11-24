@@ -67,12 +67,12 @@ export function Projects() {
           A selection of marketing projects and creative campaigns
         </p>
 
-        {/* The Ceylon - Featured Project */}
+        {/* Cafe Promotions - Featured Project */}
         <div className="mb-20">
           <div className="bg-white p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <div>
-                <h3 className="font-serif italic text-3xl mb-4">The Ceylon</h3>
+                <h3 className="font-serif italic text-3xl mb-4">Cafe Promotions</h3>
                 <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
                   Brand Marketing & Social Media
                 </p>
