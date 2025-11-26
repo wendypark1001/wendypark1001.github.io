@@ -226,7 +226,7 @@ export function Projects() {
             <div className="space-y-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Quantitative Research Report</h4>
+                  <h4 className="font-serif italic text-2xl mb-4">Quantitative Research Report - Adidas</h4>
                   <p className="text-sm leading-relaxed mb-4">
                     Led in-depth desk research and quantitative analysis to define student consumer personas, map decision journeys,
                     and evaluate the competitive landscape for Adidas&apos; campus presence.
@@ -272,7 +272,7 @@ export function Projects() {
 
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Qualitative Research Report</h4>
+                  <h4 className="font-serif italic text-2xl mb-4">Qualitative Research Report - Adidas</h4>
                   <p className="text-sm leading-relaxed mb-4">
                     Conducted in-depth secondary research alongside primary interviews and focus groups to analyze
                     Adidas&apos; current market landscape, consumer mindset, and industry movements.
@@ -319,7 +319,7 @@ export function Projects() {
 
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-serif italic text-2xl mb-4">MGMT30019 | Strategic Report</h4>
+                  <h4 className="font-serif italic text-2xl mb-4">Research & Strategic Report - Higher Education: Case Study of Monash University</h4>
                   <p className="text-sm leading-relaxed mb-4">
                     Delivered a strategic consulting report synthesizing market trends, competitive analysis, and stakeholder feedback
                     into actionable recommendations for an enterprise partner.
@@ -329,7 +329,6 @@ export function Projects() {
                   </p>
                   <div className="space-y-2 text-sm">
                     <p><span className="font-serif italic">Scope:</span> Strategic analysis, stakeholder interviews, implementation roadmap</p>
-                    <p><span className="font-serif italic">Tools:</span> Excel, Miro, Google Docs</p>
                   </div>
                   <div className="mt-6">
                     <button
