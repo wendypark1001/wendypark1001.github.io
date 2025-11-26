@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
@@ -56,6 +57,34 @@ export function Projects() {
       alt: "Bold typographic poster with hand-drawn accents",
     },
   ];
+  const mktgReportImages = [
+    "/assets/MKTG20004 _ Research Report 2 FINAL-01.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-02.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-03.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-04.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-05.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-06.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-07.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-08.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-09.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-10.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-11.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-12.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-13.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-14.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-15.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-16.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-17.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-18.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-19.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-20.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-21.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-22.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-23.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-24.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-25.jpg",
+  ];
+  const [showFullReport, setShowFullReport] = useState(false);
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -200,36 +229,55 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Projects - Upcoming */}
+        {/* Projects - Research Report */}
         <div className="mb-20">
           <div className="bg-white p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-6">
               <div>
                 <h3 className="font-serif italic text-3xl mb-4">Projects</h3>
                 <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
-                  Coming soon
+                  MKTG20004 | Research Report
                 </p>
                 <p className="text-sm leading-relaxed mb-4">
-                  New featured work will be showcased here. Once final assets are delivered, this space will highlight
-                  the project narrative, objectives, and design solutions.
+                  Presented a comprehensive marketing insights deck covering audience personas, channel strategy,
+                  and creative guidelines for the University of Melbourne&apos;s course campaign.
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Scope:</span> Awaiting final brief and creative direction</p>
-                  <p><span className="font-serif italic">Deliverables:</span> To be confirmed</p>
-                  <p><span className="font-serif italic">Status:</span> Artwork in progress</p>
+                  <p><span className="font-serif italic">Scope:</span> Research, synthesis, visual storytelling</p>
+                  <p><span className="font-serif italic">Deliverables:</span> 25-page report, executive summary</p>
+                </div>
+                <div className="mt-6">
+                  <p className="font-serif italic text-sm text-[#3A2B1C] mb-2">Full Report</p>
+                  <button
+                    type="button"
+                    className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
+                    onClick={() => setShowFullReport((prev) => !prev)}
+                  >
+                    {showFullReport ? "Hide slides" : "View all 25 slides"}
+                  </button>
                 </div>
               </div>
-              <div className="w-full mx-auto max-w-lg bg-[#F5F1E8] h-64 flex items-center justify-center text-center text-xs uppercase tracking-widest text-neutral-500">
-                Featured hero image coming soon
+              <div className="w-full mx-auto max-w-lg">
+                <ImageWithFallback
+                  src={mktgReportImages[0]}
+                  alt="MKTG20004 marketing report cover slide"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {["Concept sketch", "Color study", "Typography exploration"].map((label) => (
-                <div key={label} className="w-full h-40 bg-[#F5F1E8] flex items-center justify-center text-[0.65rem] tracking-[0.3em] uppercase text-neutral-400">
-                  {label}
-                </div>
-              ))}
-            </div>
+            {showFullReport && (
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {mktgReportImages.map((imageSrc) => (
+                  <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
+                    <ImageWithFallback
+                      src={imageSrc}
+                      alt="MKTG20004 marketing research slide"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
