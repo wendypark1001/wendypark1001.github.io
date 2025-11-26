@@ -234,13 +234,12 @@ export function Projects() {
                     <p><span className="font-serif italic">Tools:</span> SPSS, Excel, Google Docs</p>
                   </div>
                   <div className="mt-6">
-                    <p className="font-serif italic text-sm text-[#3A2B1C] mb-2">Full Report</p>
                     <button
                       type="button"
                       className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
                       onClick={() => setShowFullReport((prev) => !prev)}
                     >
-                      {showFullReport ? "Hide slides" : "View all 25 slides"}
+                      {showFullReport ? "Hide full report" : "View full report"}
                     </button>
                   </div>
                 </div>
@@ -282,13 +281,12 @@ export function Projects() {
                     <p><span className="font-serif italic">Tools:</span> SPSS, Excel, Google Docs</p>
                   </div>
                   <div className="mt-6">
-                    <p className="font-serif italic text-sm text-[#3A2B1C] mb-2">Full Report</p>
                     <button
                       type="button"
                       className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
                       onClick={() => setShowAnnotatedReport((prev) => !prev)}
                     >
-                      {showAnnotatedReport ? "Hide annotations" : "View all 43 slides"}
+                      {showAnnotatedReport ? "Hide full report" : "View full report"}
                     </button>
                   </div>
                 </div>
