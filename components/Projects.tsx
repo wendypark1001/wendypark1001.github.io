@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
+  const encodeAssetPath = (path: string) => encodeURI(path);
   const ceylonGalleryImages = [
     {
       src: "/assets/milktea2.jpeg",
@@ -59,14 +60,40 @@ export function Projects() {
   ];
   const annotatedReportImages = Array.from({ length: 43 }, (_, index) => {
     const slideNumber = String(index + 1).padStart(2, "0");
-    return `/assets/annotated-MKTG20004_Report%201-${slideNumber}.jpg`;
+    return encodeAssetPath(`/assets/annotated-MKTG20004_Report%201-${slideNumber}.jpg`);
   });
-  const mktgReportImages = annotatedReportImages.slice(0, 25);
+  const mktgReportImages = [
+    "/assets/MKTG20004 _ Research Report 2 FINAL-01.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-02 4.26.55 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-03 4.26.55 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-04 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-05 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-06 4.26.55 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-07 4.26.55 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-08 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-09 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-10 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-11 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-12 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-13 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-14 4.27.22 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-15 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-16 4.27.05 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-17 4.27.22 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-18 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-19 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-20 4.27.22 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-21 4.27.34 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-22 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-23 4.27.17 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-24 4.27.34 PM.jpg",
+    "/assets/MKTG20004 _ Research Report 2 FINAL-25 4.27.34 PM.jpg",
+  ].map(encodeAssetPath);
   const [showFullReport, setShowFullReport] = useState(false);
   const [showAnnotatedReport, setShowAnnotatedReport] = useState(false);
   const mgmtReportImages = Array.from({ length: 36 }, (_, index) => {
     const slideNumber = String(index + 1).padStart(2, "0");
-    return `/assets/MGMT30019 - Final Report-${slideNumber}.jpg`;
+    return encodeAssetPath(`/assets/MGMT30019 - Final Report-${slideNumber}.jpg`);
   });
   const [showMgmtReport, setShowMgmtReport] = useState(false);
 
