@@ -64,6 +64,11 @@ export function Projects() {
   const mktgReportImages = annotatedReportImages.slice(0, 25);
   const [showFullReport, setShowFullReport] = useState(false);
   const [showAnnotatedReport, setShowAnnotatedReport] = useState(false);
+  const mgmtReportImages = Array.from({ length: 36 }, (_, index) => {
+    const slideNumber = String(index + 1).padStart(2, "0");
+    return `/assets/MGMT30019 - Final Report-${slideNumber}.jpg`;
+  });
+  const [showMgmtReport, setShowMgmtReport] = useState(false);
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -311,26 +316,56 @@ export function Projects() {
                   ))}
                 </div>
               )}
+
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h4 className="font-serif italic text-2xl mb-4">MGMT30019 | Strategic Report</h4>
+                  <p className="text-sm leading-relaxed mb-4">
+                    Delivered a strategic consulting report synthesizing market trends, competitive analysis, and stakeholder feedback
+                    into actionable recommendations for an enterprise partner.
+                  </p>
+                  <p className="text-sm leading-relaxed mb-4">
+                    Emphasized strategic frameworks, risk assessment, and implementation planning tailored to leadership objectives.
+                  </p>
+                  <div className="space-y-2 text-sm">
+                    <p><span className="font-serif italic">Scope:</span> Strategic analysis, stakeholder interviews, implementation roadmap</p>
+                    <p><span className="font-serif italic">Tools:</span> Excel, Miro, Google Docs</p>
+                  </div>
+                  <div className="mt-6">
+                    <button
+                      type="button"
+                      className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
+                      onClick={() => setShowMgmtReport((prev) => !prev)}
+                    >
+                      {showMgmtReport ? "Hide full report" : "View full report"}
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full mx-auto max-w-lg">
+                  <ImageWithFallback
+                    src={mgmtReportImages[0]}
+                    alt="MGMT30019 strategic report cover slide"
+                    className="w-full h-auto rounded-lg shadow-sm"
+                  />
+                </div>
+              </div>
+              {showMgmtReport && (
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {mgmtReportImages.map((imageSrc) => (
+                    <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
+                      <ImageWithFallback
+                        src={imageSrc}
+                        alt="MGMT30019 strategic report slide"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Additional Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white p-6">
-            <div className="mb-4 aspect-square bg-[#F5F1E8] flex items-center justify-center">
-              <ImageWithFallback
-                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=400&fit=crop"
-                alt="Educational content"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h4 className="font-serif italic text-xl mb-2">Joyful English Program</h4>
-            <p className="text-xs text-neutral-600 mb-3">Educational content design</p>
-            <p className="text-sm">Created comprehensive learning materials and visual resources for elementary students in Cambodia, combining pedagogy with engaging design.</p>
-          </div>
-
-        </div>
       </div>
     </section>
   );
