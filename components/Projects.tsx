@@ -2,7 +2,6 @@ import { useState } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
-  const encodeAssetPath = (path: string) => encodeURI(path);
   const ceylonGalleryImages = [
     {
       src: "/assets/milktea2.jpeg",
@@ -58,38 +57,12 @@ export function Projects() {
       alt: "Bold typographic poster with hand-drawn accents",
     },
   ];
-  const mktgReportImages = [
-    "/assets/MKTG20004 _ Research Report 2 FINAL-01.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-02.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-03.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-04.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-05.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-06.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-07.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-08.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-09.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-10.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-11.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-12.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-13.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-14.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-15.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-16.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-17.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-18.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-19.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-20.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-21.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-22.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-23.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-24.jpg",
-    "/assets/MKTG20004 _ Research Report 2 FINAL-25.jpg",
-  ].map(encodeAssetPath);
-  const [showFullReport, setShowFullReport] = useState(false);
   const annotatedReportImages = Array.from({ length: 43 }, (_, index) => {
     const slideNumber = String(index + 1).padStart(2, "0");
     return `/assets/annotated-MKTG20004_Report%201-${slideNumber}.jpg`;
-  }).map(encodeAssetPath);
+  });
+  const mktgReportImages = annotatedReportImages.slice(0, 25);
+  const [showFullReport, setShowFullReport] = useState(false);
   const [showAnnotatedReport, setShowAnnotatedReport] = useState(false);
 
   return (
@@ -248,13 +221,16 @@ export function Projects() {
             <div className="space-y-12">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-serif italic text-2xl mb-4">MKTG20004 | Research Report</h4>
+                  <h4 className="font-serif italic text-2xl mb-4">Quantitative Research Report</h4>
                   <p className="text-sm leading-relaxed mb-4">
-                    Presented a comprehensive marketing insights deck covering audience personas, channel strategy,
-                    and creative guidelines for the University of Melbourne&apos;s course campaign.
+                    Led in-depth desk research and quantitative analysis to define student consumer personas, map decision journeys,
+                    and evaluate the competitive landscape for Adidas&apos; campus presence.
+                  </p>
+                  <p className="text-sm leading-relaxed mb-4">
+                    Findings informed positioning angles, messaging pillars, and a channel strategy grounded in data-backed audience insights tailored to student needs.
                   </p>
                   <div className="space-y-2 text-sm">
-                    <p><span className="font-serif italic">Scope:</span> Research, synthesis, visual storytelling</p>
+                    <p><span className="font-serif italic">Scope:</span> Market analysis, survey synthesis, visual storytelling</p>
                     <p><span className="font-serif italic">Tools:</span> SPSS, Excel, Google Docs</p>
                   </div>
                   <div className="mt-6">
@@ -292,10 +268,14 @@ export function Projects() {
 
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Annotated Research Commentary</h4>
+                  <h4 className="font-serif italic text-2xl mb-4">Qualitative Research Report</h4>
                   <p className="text-sm leading-relaxed mb-4">
-                    Produced an annotated version of the marketing research report highlighting methodology, audience insights,
-                    and strategic recommendations aligned with course objectives.
+                    Conducted in-depth secondary research alongside primary interviews and focus groups to analyze
+                    Adidas&apos; current market landscape, consumer mindset, and industry movements.
+                  </p>
+                  <p className="text-sm leading-relaxed mb-4">
+                    Insights informed strategic recommendations across positioning, channel mix, and storytelling angles tailored
+                    to emerging audience needs and competitive pressures.
                   </p>
                   <div className="space-y-2 text-sm">
                     <p><span className="font-serif italic">Scope:</span> Annotation, critical analysis, visual formatting</p>
