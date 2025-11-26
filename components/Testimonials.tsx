@@ -1,13 +1,26 @@
 export function Testimonials() {
   const testimonials = [
     {
-      quote: "Wendy demonstrated really excellent public speaking skills and an easy ability to communicate with a variety of different people. She exhibited a natural inclination towards leadership with remarkable initiative.",
+      quote: (
+        <>
+          Wendy she demonstrated really excellent <mark className="bg-[#EBDDC8] px-1">public speaking skills</mark> and an easy ability to{" "}
+          <mark className="bg-[#EBDDC8] px-1">communicate</mark> with a variety of different people. She also exhibited a natural inclination towards{" "}
+          <mark className="bg-[#EBDDC8] px-1">leadership</mark> with remarkable initiative and bringing people together to collaborate on tasks.
+          <br />
+          She is a <mark className="bg-[#EBDDC8] px-1">reliable</mark> and <mark className="bg-[#EBDDC8] px-1">committed</mark> person and an absolute pleasure to work with.
+        </>
+      ),
       author: "Maree Stathoulis",
       role: "Programs and Events Coordinator",
       organization: "University of Melbourne"
     },
     {
-      quote: "I've been continually impressed by her initiative, leadership, and commitment to enriching the student experience. Wendy consistently demonstrates professionalism and insightful contributions at faculty events and student panels.",
+      quote: (
+        <>
+          Wendy consistently demonstrates <mark className="bg-[#EBDDC8] px-1">professionalism</mark> and <mark className="bg-[#EBDDC8] px-1">insightful contributions</mark> at faculty events and student panels, representing her faculty admirably.
+          Her thoughtful input, excellent communication, and commitment to supporting her peers make her an exceptional student and a <mark className="bg-[#EBDDC8] px-1">valuable asset</mark> to any group.
+        </>
+      ),
       author: "John Minseok Kim",
       role: "Senior Analyst Engineer",
       organization: "NAB | Master of Engineering (Software with AI)"
@@ -25,10 +38,14 @@ export function Testimonials() {
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#F5F1E8] p-8">
-              <p className="text-sm leading-relaxed mb-6 italic">"{testimonial.quote}"</p>
+            <div key={index} className="bg-white p-8 border border-[#EADBC8] rounded-2xl shadow-sm">
+              <p className="text-base leading-relaxed mb-6 text-[#3A2B1C]">
+                <span className="text-4xl font-serif text-[#C4A57B] align-top leading-none mr-2">“</span>
+                {testimonial.quote}
+                <span className="text-4xl font-serif text-[#C4A57B] align-bottom leading-none ml-2">”</span>
+              </p>
               <div>
-                <p className="font-serif">{testimonial.author}</p>
+                <p className="font-serif text-lg text-[#3A2B1C]">{testimonial.author}</p>
                 <p className="text-xs text-neutral-600">{testimonial.role}</p>
                 <p className="text-xs text-neutral-600">{testimonial.organization}</p>
               </div>
