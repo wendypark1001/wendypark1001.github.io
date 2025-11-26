@@ -85,6 +85,11 @@ export function Projects() {
     "/assets/MKTG20004 _ Research Report 2 FINAL-25.jpg",
   ];
   const [showFullReport, setShowFullReport] = useState(false);
+  const annotatedReportImages = Array.from({ length: 43 }, (_, index) => {
+    const slideNumber = String(index + 1).padStart(2, "0");
+    return `/assets/annotated-MKTG20004_Report%201-${slideNumber}.jpg`;
+  });
+  const [showAnnotatedReport, setShowAnnotatedReport] = useState(false);
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -272,6 +277,58 @@ export function Projects() {
                     <ImageWithFallback
                       src={imageSrc}
                       alt="MKTG20004 marketing research slide"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Projects - Annotated Report */}
+        <div className="mb-20">
+          <div className="bg-white p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-6">
+              <div>
+                <h3 className="font-serif italic text-3xl mb-4">Projects</h3>
+                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                  Annotated Research Commentary
+                </p>
+                <p className="text-sm leading-relaxed mb-4">
+                  Produced an annotated version of the marketing research report highlighting methodology, audience insights,
+                  and strategic recommendations aligned with course objectives.
+                </p>
+                <div className="space-y-2 text-sm">
+                  <p><span className="font-serif italic">Scope:</span> Annotation, critical analysis, visual formatting</p>
+                  <p><span className="font-serif italic">Deliverables:</span> 43 annotated slides, reflection notes</p>
+                </div>
+                <div className="mt-6">
+                  <p className="font-serif italic text-sm text-[#3A2B1C] mb-2">Full Report</p>
+                  <button
+                    type="button"
+                    className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
+                    onClick={() => setShowAnnotatedReport((prev) => !prev)}
+                  >
+                    {showAnnotatedReport ? "Hide annotations" : "View all 43 slides"}
+                  </button>
+                </div>
+              </div>
+              <div className="w-full mx-auto max-w-lg">
+                <ImageWithFallback
+                  src={annotatedReportImages[0]}
+                  alt="Annotated marketing research slide"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+              </div>
+            </div>
+            {showAnnotatedReport && (
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {annotatedReportImages.map((imageSrc) => (
+                  <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
+                    <ImageWithFallback
+                      src={imageSrc}
+                      alt="Annotated MKTG20004 slide"
                       className="w-full h-full object-cover"
                     />
                   </div>
