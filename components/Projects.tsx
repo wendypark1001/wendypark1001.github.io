@@ -351,14 +351,13 @@ export function Projects() {
 
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Higher Education Case Study</h4>
+                  <h4 className="font-serif italic text-2xl mb-4">Marketing Insights Report - News Corp Aus</h4>
                   <p className="text-sm leading-relaxed mb-4">
-                    Comprehensive case study blending quantitative dashboards, qualitative insights, and journey maps to evaluate student touchpoints
-                    for a large education provider.
+                    Comprehensive marketing analysis of News Corp Australia’s printed newspaper segment, examining market challenges,
+                    shifting consumer behaviours, and strategic opportunities to revitalise its relevance in a digital media landscape.
                   </p>
                   <div className="space-y-2 text-sm">
-                    <p><span className="font-serif italic">Scope:</span> Data visualization, persona development, journey mapping</p>
-                    <p><span className="font-serif italic">Tools:</span> Figma, Canva, Google Suite</p>
+                    <p><span className="font-serif italic">Scope:</span> Market performance analysis, marketing strategy evaluation, consumer insight development</p>
                   </div>
                   <div className="mt-6">
                     <button
