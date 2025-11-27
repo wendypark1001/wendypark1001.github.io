@@ -1,11 +1,16 @@
-import { Palette, Camera, Video, Mail, TrendingUp, Users } from "lucide-react";
+import { BookOpenCheck, Camera, BarChart3, Mail, TrendingUp, Users } from "lucide-react";
 
 export function Skills() {
   const skills = [
     {
-      category: "Graphic Design",
-      icon: Palette,
-      items: ["Social Media Posts", "Promotional Materials", "Brand Identity", "Visual Storytelling"]
+      category: "Report Writing",
+      icon: BookOpenCheck,
+      items: [
+        "Insightful marketing reports",
+        "Clear structure",
+        "Consumer & competitor analysis",
+        "Strategic recommendations"
+      ]
     },
     {
       category: "Content Creation",
@@ -13,9 +18,14 @@ export function Skills() {
       items: ["Photography", "Image Editing", "Layout Design", "Typography"]
     },
     {
-      category: "Video & Reels",
-      icon: Video,
-      items: ["Short-form Content", "Instagram Reels", "Story Creation", "Video Editing"]
+      category: "Research",
+      icon: BarChart3,
+      items: [
+        "Market research",
+        "Data interpretation",
+        "Trend analysis",
+        "Consumer insight development"
+      ]
     },
     {
       category: "Social Media",
@@ -41,7 +51,7 @@ export function Skills() {
           EXPERTISE
         </h2>
         <p className="text-center text-sm text-neutral-600 mb-12">
-          Tools & skills I use to bring creative visions to life
+          Core marketing capabilities across research, strategy, reporting, and community engagement
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {skills.map((skill, index) => {
