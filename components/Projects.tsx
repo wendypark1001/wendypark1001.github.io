@@ -96,6 +96,11 @@ export function Projects() {
     return encodeAssetPath(`/assets/MGMT30019 - Final Report-${slideNumber}.jpg`);
   });
   const [showMgmtReport, setShowMgmtReport] = useState(false);
+  const caseStudyImages = Array.from({ length: 44 }, (_, index) => {
+    const slideNumber = String(index + 1).padStart(2, "0");
+    return encodeAssetPath(`/assets/2947C81C-43C7-416F-910A-404A94BC4D4B-${slideNumber}.jpg`);
+  });
+  const [showCaseStudy, setShowCaseStudy] = useState(false);
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -337,6 +342,49 @@ export function Projects() {
                       <ImageWithFallback
                         src={imageSrc}
                         alt="Annotated MKTG20004 slide"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h4 className="font-serif italic text-2xl mb-4">Higher Education Case Study</h4>
+                  <p className="text-sm leading-relaxed mb-4">
+                    Comprehensive case study blending quantitative dashboards, qualitative insights, and journey maps to evaluate student touchpoints
+                    for a large education provider.
+                  </p>
+                  <div className="space-y-2 text-sm">
+                    <p><span className="font-serif italic">Scope:</span> Data visualization, persona development, journey mapping</p>
+                    <p><span className="font-serif italic">Tools:</span> Figma, Canva, Google Suite</p>
+                  </div>
+                  <div className="mt-6">
+                    <button
+                      type="button"
+                      className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
+                      onClick={() => setShowCaseStudy((prev) => !prev)}
+                    >
+                      {showCaseStudy ? "Hide full report" : "View full report"}
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full mx-auto max-w-lg">
+                  <ImageWithFallback
+                    src={caseStudyImages[0]}
+                    alt="Higher education case study slide"
+                    className="w-full h-auto rounded-lg shadow-sm"
+                  />
+                </div>
+              </div>
+              {showCaseStudy && (
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {caseStudyImages.map((imageSrc) => (
+                    <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
+                      <ImageWithFallback
+                        src={imageSrc}
+                        alt="Higher education case study slide"
                         className="w-full h-full object-cover"
                       />
                     </div>
