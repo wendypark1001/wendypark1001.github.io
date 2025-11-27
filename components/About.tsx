@@ -13,14 +13,16 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Marketing & Management bachelor graduate at the University of Melbourne with a passion for creating compelling brand stories.
+                Marketing & Management graduate from the University of Melbourne with strong skills in research, data interpretation,
+                and producing clear, insight-driven marketing reports.
               </p>
               <p>
-                Various working experience in social media content creation, graphic design, and community engagement.
-                Work spans from crafting elegant promotional materials for cafes to developing educational content and leading peer mentoring initiatives.
+                Experienced in social media content creation, graphic design, and community engagement, including leadership roles
+                across peer mentoring programs and student events.
               </p>
               <p>
-                Brings cultural sensitivity and creative thinking to every project with a multilingual background (English, Korean, Khmer) and international perspective.
+                Brings cultural sensitivity, creative thinking, and a multilingual background (English, Korean, Khmer) to every project,
+                shaping thoughtful communication and meaningful brand storytelling.
               </p>
             </div>
           </div>
