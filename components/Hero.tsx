@@ -8,10 +8,10 @@ export function Hero() {
         </h1>
         <div className="w-32 h-px bg-black mx-auto mb-6"></div>
         <p className="font-serif text-xl mb-4">
-          Marketing & Brand Storyteller
+          Marketing Research & Content Strategy
         </p>
         <p className="text-sm text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-          Creating engaging visual content and strategic campaigns that connect brands with their audiences
+          Turning data-driven insights into clear reports, strategic recommendations, and creative campaigns that strengthen brand connections
         </p>
       </div>
     </section>
