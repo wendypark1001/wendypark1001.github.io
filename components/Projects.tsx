@@ -117,7 +117,7 @@ export function Projects() {
           FEATURED WORK
         </h2>
         <p className="text-center text-sm text-neutral-600 mb-16">
-          Events I have planned and delivered, alongside marketing campaigns and research
+          Events planned and delivered, alongside marketing campaigns and research
         </p>
 
         {/* Event Management & Student Experience */}
@@ -130,8 +130,8 @@ export function Projects() {
                   Community Engagement & Campus Activations
                 </p>
                 <p className="text-sm leading-relaxed mb-4">
-                  As Student Experience Coordinator at Scape Australia, I plan and deliver an average of 20-30 events a month
-                  across 5 Scape buildings in Melbourne, including large-scale events of 200-300 attendees. From interactive DIY
+                  An average of 20-30 events a month across 5 Scape buildings in Melbourne, delivered as Student Experience
+                  Coordinator at Scape Australia, including large-scale events of 200-300 attendees. From interactive DIY
                   stations and themed welcome celebrations to large-scale social mixers, every event is built to foster belonging.
                 </p>
                 <div className="space-y-2 text-sm">

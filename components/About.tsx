@@ -13,16 +13,16 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Event coordinator based in Melbourne. As Student Experience Coordinator at Scape Australia, I plan and deliver
-                20-30 events a month across 5 buildings, handling vendors, budgets and ticketing, and lead a team of 40+ Student Ambassadors.
+                Melbourne-based event coordinator, currently Student Experience Coordinator at Scape Australia. The role covers
+                20-30 events a month across 5 buildings, from vendors, budgets and ticketing to leading a team of 40+ Student Ambassadors.
               </p>
               <p>
-                Before Scape, I helped facilitate Orientation Week for 6,000+ new students and trained 900+ peer mentors at the
-                University of Melbourne, and I host guests at Melbourne Skydeck, which welcomes over 700 visitors a day.
+                Previously helped facilitate Orientation Week for 6,000+ new students and trained 900+ peer mentors at the
+                University of Melbourne, alongside hosting guests at Melbourne Skydeck, which welcomes over 700 visitors a day.
               </p>
               <p>
-                I hold a Bachelor of Commerce in Marketing & Management from the University of Melbourne, so I can promote the events I run too.
-                I speak English, Korean and Khmer, and bring cultural sensitivity to every community I work with.
+                A Bachelor of Commerce in Marketing & Management from the University of Melbourne adds the skills to promote each event, not just run it.
+                Fluent in English, Korean and Khmer, with cultural sensitivity at the heart of every community.
               </p>
             </div>
           </div>
