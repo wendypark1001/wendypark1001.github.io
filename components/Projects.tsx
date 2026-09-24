@@ -205,6 +205,88 @@ export function Projects() {
           </div>
         </div>
 
+        {/* Event Management & Student Experience */}
+        <div className="mb-20">
+          <div className="bg-white p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
+              <div>
+                <h3 className="font-serif italic text-3xl mb-4">Event Management & Student Experience</h3>
+                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                  Community Engagement & Campus Activations
+                </p>
+                <p className="text-sm leading-relaxed mb-4">
+                  Planning, promoting, and delivering vibrant student life experiences and resident community events.
+                  From interactive DIY stations and themed welcome celebrations to large-scale social mixers, fostering
+                  belonging, engagement, and memorable community moments.
+                </p>
+                <div className="space-y-2 text-sm">
+                  <p><span className="font-serif italic">Roles & Initiatives:</span> Resident & Student Experience Activations, Community Building</p>
+                  <p><span className="font-serif italic">Key Events:</span> Think Pink Welcome Party, USQ Welcome Social, DIY Matcha Station</p>
+                  <p><span className="font-serif italic">Deliverables:</span> Event Execution, Community Facilitation, Photo & Video Content</p>
+                </div>
+              </div>
+              <div className="w-full mx-auto max-w-lg">
+                <ImageWithFallback
+                  src="/assets/event-welcome-social.jpg"
+                  alt="USQ Welcome Social community gathering"
+                  className="w-full h-auto rounded-lg shadow-sm"
+                />
+                <p className="text-xs text-neutral-500 mt-2 text-center italic">
+                  USQ Welcome Social — Community banquet & celebration
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
+                <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
+                  <ImageWithFallback
+                    src="/assets/event-matcha-station.png"
+                    alt="DIY Matcha Station community event setup"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="font-serif italic text-lg text-neutral-800">DIY Matcha Station</h4>
+                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Interactive Student Workshop</p>
+                <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
+                  Engaging hands-on workshop station fostering relaxed, interactive peer connections over craft drinks.
+                </p>
+              </div>
+
+              <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
+                <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
+                  <ImageWithFallback
+                    src="/assets/event-pink-party.jpg"
+                    alt="Think Pink Welcome Party photobooth strip with Scape"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <h4 className="font-serif italic text-lg text-neutral-800">Think Pink Welcome Party</h4>
+                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Scape Student Living Activation</p>
+                <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
+                  High-energy themed welcome bash featuring custom photobooth activations and community mixer spaces.
+                </p>
+              </div>
+
+              <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4 sm:col-span-2 lg:col-span-1">
+                <div className="w-full h-72 overflow-hidden rounded-lg mb-3 bg-black flex items-center justify-center">
+                  <video
+                    src="/assets/event-pink-party.mp4"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="font-serif italic text-lg text-neutral-800">Event Highlights Reel</h4>
+                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Live Atmosphere & Engagement</p>
+                <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
+                  Video snapshot capturing student turnout, atmosphere, and live social interactions across the activation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Client Posters */}
         <div className="mb-20">
           <div className="bg-white p-8 md:p-12">
