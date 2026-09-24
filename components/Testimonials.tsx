@@ -38,7 +38,7 @@ export function Testimonials() {
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white p-8 border border-[#EADBC8] rounded-2xl shadow-sm">
+            <div key={index} className="bg-white p-8 border border-[#EADBC8] rounded-2xl shadow-xs">
               <p className="text-base leading-relaxed mb-6 text-[#3A2B1C]">
                 <span className="text-4xl font-serif text-[#C4A57B] align-top leading-none mr-2">“</span>
                 {testimonial.quote}

@@ -145,7 +145,7 @@ export function Projects() {
                 <ImageWithFallback
                   src="/assets/event-welcome-social.jpg"
                   alt="USQ Welcome Social community gathering"
-                  className="w-full h-auto rounded-lg shadow-sm"
+                  className="w-full h-auto rounded-lg shadow-xs"
                 />
                 <p className="text-xs text-neutral-500 mt-2 text-center italic">
                   USQ Welcome Social — Community banquet & celebration
@@ -231,7 +231,7 @@ export function Projects() {
             </div>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
               {ceylonGalleryImages.map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[3/4]">
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-3/4">
                   <ImageWithFallback
                     src={image.src}
                     alt={image.alt}
@@ -281,7 +281,7 @@ export function Projects() {
               {mpmpGalleryImages.map((image) => (
                 <div
                   key={image.src}
-                  className="w-full overflow-hidden rounded-lg aspect-[3/4]"
+                  className="w-full overflow-hidden rounded-lg aspect-3/4"
                 >
                   <ImageWithFallback
                     src={image.src}
@@ -318,13 +318,13 @@ export function Projects() {
                 <ImageWithFallback
                   src={clientPosterImages[0].src}
                   alt={clientPosterImages[0].alt}
-                  className="w-full h-auto rounded-lg shadow-sm"
+                  className="w-full h-auto rounded-lg shadow-xs"
                 />
               </div>
             </div>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {clientPosterImages.slice(1).map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-[3/4]">
+                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-3/4">
                   <ImageWithFallback
                     src={image.src}
                     alt={image.alt}
@@ -375,7 +375,7 @@ export function Projects() {
                   <ImageWithFallback
                     src={mktgReportImages[0]}
                     alt="MKTG20004 marketing report cover slide"
-                    className="w-full h-auto rounded-lg shadow-sm"
+                    className="w-full h-auto rounded-lg shadow-xs"
                   />
                 </div>
               </div>
@@ -422,7 +422,7 @@ export function Projects() {
                   <ImageWithFallback
                     src={annotatedReportImages[0]}
                     alt="Annotated marketing research slide"
-                    className="w-full h-auto rounded-lg shadow-sm"
+                    className="w-full h-auto rounded-lg shadow-xs"
                   />
                 </div>
               </div>
@@ -464,7 +464,7 @@ export function Projects() {
                   <ImageWithFallback
                     src={caseStudyImages[0]}
                     alt="Higher education case study slide"
-                    className="w-full h-auto rounded-lg shadow-sm"
+                    className="w-full h-auto rounded-lg shadow-xs"
                   />
                 </div>
               </div>
@@ -509,7 +509,7 @@ export function Projects() {
                   <ImageWithFallback
                     src={mgmtReportImages[0]}
                     alt="MGMT30019 strategic report cover slide"
-                    className="w-full h-auto rounded-lg shadow-sm"
+                    className="w-full h-auto rounded-lg shadow-xs"
                   />
                 </div>
               </div>
