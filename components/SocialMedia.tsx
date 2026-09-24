@@ -1,5 +1,3 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
-
 export function SocialMedia() {
   const stats = [
     {
