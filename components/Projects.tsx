@@ -240,7 +240,7 @@ export function Projects() {
               <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
                 <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
                   <ImageWithFallback
-                    src="/assets/event-matcha-station.png"
+                    src="/assets/event-matcha-station.jpg"
                     alt="DIY Matcha Station community event setup"
                     className="w-full h-full object-cover"
                   />

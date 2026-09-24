@@ -27,7 +27,7 @@ export function SocialMedia() {
           Building meaningful connections through strategic content
         </p>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <div className="font-serif italic mb-2" style={{ fontSize: '3rem', color: '#C4A57B' }}>
