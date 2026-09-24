@@ -13,16 +13,16 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Marketing & Management graduate from the University of Melbourne with strong skills in research, data interpretation,
-                and producing clear, insight-driven marketing reports.
+                Event coordinator based in Melbourne. As Student Experience Coordinator at Scape Australia, I plan and deliver
+                20-30 events a month across 5 buildings, handling vendors, budgets and ticketing, and lead a team of 40+ Student Ambassadors.
               </p>
               <p>
-                Experienced in social media content creation, graphic design, and community engagement, including leadership roles
-                across peer mentoring programs and student events.
+                Before Scape, I helped facilitate Orientation Week for 6,000+ new students and trained 900+ peer mentors at the
+                University of Melbourne, and I host guests at Melbourne Skydeck, which welcomes over 700 visitors a day.
               </p>
               <p>
-                Brings cultural sensitivity, creative thinking, and a multilingual background (English, Korean, Khmer) to every project,
-                shaping thoughtful communication and meaningful brand storytelling.
+                I hold a Bachelor of Commerce in Marketing & Management from the University of Melbourne, so I can promote the events I run too.
+                I speak English, Korean and Khmer, and bring cultural sensitivity to every community I work with.
               </p>
             </div>
           </div>

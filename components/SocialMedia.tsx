@@ -1,19 +1,19 @@
 export function SocialMedia() {
   const stats = [
     {
-      number: "45",
-      label: "Post Impressions",
-      description: "Past 7 days"
+      number: "20-30",
+      label: "Events a Month",
+      description: "Across 5 Scape buildings"
     },
     {
-      number: "85",
-      label: "Profile Views",
-      description: "Weekly engagement"
+      number: "900+",
+      label: "Peer Mentors Trained",
+      description: "University of Melbourne"
     },
     {
-      number: "350+",
-      label: "Professional Network",
-      description: "LinkedIn connections"
+      number: "6,000+",
+      label: "New Students Welcomed",
+      description: "Orientation Week"
     }
   ];
 
@@ -24,7 +24,7 @@ export function SocialMedia() {
           IMPACT & REACH
         </h2>
         <p className="text-center text-sm mb-12 text-neutral-400">
-          Building meaningful connections through strategic content
+          Building community through events, mentoring and student engagement
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">

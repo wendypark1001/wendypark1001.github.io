@@ -1,46 +1,46 @@
-import { BookOpenCheck, Camera, BarChart3, Mail, TrendingUp, Users } from "lucide-react";
+import { BarChart3, CalendarCheck, Camera, Handshake, Megaphone, Users } from "lucide-react";
 
 export function Skills() {
   const skills = [
     {
-      category: "Report Writing",
-      icon: BookOpenCheck,
+      category: "Event Planning & Delivery",
+      icon: CalendarCheck,
       items: [
-        "Insightful marketing reports",
-        "Clear structure",
-        "Consumer & competitor analysis",
-        "Strategic recommendations"
+        "20-30 events a month",
+        "Large-scale events (200-300 guests)",
+        "Community events & activations",
+        "Orientation & welcome programs"
       ]
+    },
+    {
+      category: "Logistics & Budgeting",
+      icon: Handshake,
+      items: ["Vendor onboarding", "Event budgeting", "Ticketing systems", "Multi-site coordination"]
+    },
+    {
+      category: "Team Leadership",
+      icon: Users,
+      items: [
+        "Recruiting & onboarding",
+        "Training 40+ ambassadors",
+        "Rostering",
+        "Peer mentoring (900+ mentors trained)"
+      ]
+    },
+    {
+      category: "Event Promotion",
+      icon: Megaphone,
+      items: ["Social media campaigns", "Posters & print", "Reels & video", "Copywriting"]
     },
     {
       category: "Content Creation",
       icon: Camera,
-      items: ["Photography", "Image Editing", "Layout Design", "Typography"]
+      items: ["Event photography", "Image editing", "Layout design", "Typography"]
     },
     {
-      category: "Research",
+      category: "Research & Reporting",
       icon: BarChart3,
-      items: [
-        "Market research",
-        "Data interpretation",
-        "Trend analysis",
-        "Consumer insight development"
-      ]
-    },
-    {
-      category: "Social Media",
-      icon: TrendingUp,
-      items: ["Content Strategy", "Platform Management", "Engagement", "Analytics"]
-    },
-    {
-      category: "Marketing",
-      icon: Mail,
-      items: ["Campaign Development", "Brand Messaging", "Email Marketing", "Copywriting"]
-    },
-    {
-      category: "Community",
-      icon: Users,
-      items: ["Engagement Strategy", "Event Planning", "Peer Leadership", "Public Speaking"]
+      items: ["Market research", "Consumer insight", "Data interpretation", "Strategic recommendations"]
     }
   ];
 
@@ -51,7 +51,7 @@ export function Skills() {
           EXPERTISE
         </h2>
         <p className="text-center text-sm text-neutral-600 mb-12">
-          Core marketing capabilities across research, strategy, reporting, and community engagement
+          Planning, running and promoting events, backed by a marketing and management degree
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {skills.map((skill, index) => {
