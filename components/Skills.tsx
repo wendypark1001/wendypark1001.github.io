@@ -6,41 +6,49 @@ export function Skills() {
       category: "Event Planning & Delivery",
       icon: CalendarCheck,
       items: [
-        "20-30 events a month",
-        "Large-scale events (200-300 guests)",
-        "Community events & activations",
-        "Orientation & welcome programs"
+        "Precinct calendar scheduling & space curation",
+        "Day-of run sheet, briefing & live flow control"
       ]
     },
     {
-      category: "Logistics & Budgeting",
+      category: "Operations & Governance",
       icon: Handshake,
-      items: ["Vendor onboarding", "Event budgeting", "Ticketing systems", "Multi-site coordination"]
+      items: [
+        "Procurement, GL code tracking & finance approvals",
+        "Attendance policy enforcement & U18 compliance"
+      ]
     },
     {
-      category: "Team Leadership",
+      category: "Stakeholder & Team Leadership",
       icon: Users,
       items: [
-        "Recruiting & onboarding",
-        "Training 40+ ambassadors",
-        "Rostering",
-        "Peer mentoring (900+ mentors trained)"
+        "Multi-stage recruitment, group interviews & onboarding",
+        "Shift allocations, incident resolution & feedback loops"
       ]
     },
     {
-      category: "Event Promotion",
+      category: "Promotion & Lifecycle Marketing",
       icon: Megaphone,
-      items: ["Social media campaigns", "Posters & print", "Reels & video", "Copywriting"]
+      items: [
+        "Segmented email campaigns & reminder workflows",
+        "Omnichannel announcements & QR code tracking"
+      ]
     },
     {
-      category: "Content Creation",
+      category: "Creative Direction & Assets",
       icon: Camera,
-      items: ["Event photography", "Image editing", "Layout design", "Typography"]
+      items: [
+        "Brand-aligned print collateral & digital displays",
+        "Live event documentation & recap media creation"
+      ]
     },
     {
-      category: "Research & Reporting",
+      category: "Data & Community Insights",
       icon: BarChart3,
-      items: ["Market research", "Consumer insight", "Data interpretation", "Strategic recommendations"]
+      items: [
+        "Post-event attendance analysis & attrition tracking",
+        "Welfare follow-ups & resident experience feedback"
+      ]
     }
   ];
 
@@ -73,10 +81,21 @@ export function Skills() {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="font-serif italic text-xl mb-6">Tools</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {["Canva", "Social Media Platforms", "Instagram", "Facebook", "LinkedIn", "Cursor AI", "Google Workspace"].map((tool, index) => (
-              <span key={index} className="px-4 py-2 bg-[#F5F1E8] text-sm">
+          <h3 className="font-serif italic text-xl mb-6">Systems &amp; Tools</h3>
+          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+            {[
+              "Humanitix",
+              "Dayforce",
+              "Trello",
+              "StarRez",
+              "Monday.com",
+              "Webexpenses",
+              "Google Workspace",
+              "Canva",
+              "Instagram & Meta Suite",
+              "LinkedIn"
+            ].map((tool, index) => (
+              <span key={index} className="px-4 py-2 bg-[#F5F1E8] text-xs uppercase tracking-wider font-medium text-neutral-700">
                 {tool}
               </span>
             ))}
