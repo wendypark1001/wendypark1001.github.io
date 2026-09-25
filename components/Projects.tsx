@@ -148,7 +148,7 @@ export function Projects() {
                   className="w-full h-auto rounded-lg shadow-xs"
                 />
                 <p className="text-xs text-neutral-500 mt-2 text-center italic">
-                  USQ Welcome Social — Community banquet & celebration
+                  USQ Welcome Social: Community banquet & celebration
                 </p>
               </div>
             </div>
