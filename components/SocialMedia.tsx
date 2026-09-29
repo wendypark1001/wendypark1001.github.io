@@ -1,19 +1,22 @@
 export function SocialMedia() {
   const stats = [
     {
-      number: "45",
+      number: "945",
       label: "Post Impressions",
-      description: "Past seven days"
+      description: "Past seven days",
+      growth: "+1,502% vs prior week"
     },
     {
-      number: "85",
-      label: "Profile Views",
-      description: "Weekly engagement"
+      number: "590",
+      label: "Total Followers",
+      description: "Active professional community",
+      growth: null
     },
     {
-      number: "500+",
-      label: "Professional Network",
-      description: "LinkedIn connections"
+      number: "108",
+      label: "Profile Viewers",
+      description: "Past 90 days",
+      growth: "+200% quarterly growth"
     }
   ];
 
@@ -29,12 +32,18 @@ export function SocialMedia() {
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center">
+            <div key={index} className="text-center flex flex-col items-center">
               <div className="font-serif italic mb-2" style={{ fontSize: '3rem', color: '#C4A57B' }}>
                 {stat.number}
               </div>
-              <div className="text-sm mb-1">{stat.label}</div>
-              <div className="text-xs text-neutral-500">{stat.description}</div>
+              <div className="text-sm font-medium mb-1 text-white">{stat.label}</div>
+              <div className="text-xs text-neutral-400 mb-2">{stat.description}</div>
+              {stat.growth && (
+                <div className="inline-flex items-center gap-1 text-xs text-emerald-400 bg-emerald-950/60 border border-emerald-800/40 px-2.5 py-0.5 rounded-full font-medium mt-1">
+                  <span>▲</span>
+                  <span>{stat.growth}</span>
+                </div>
+              )}
             </div>
           ))}
         </div>
