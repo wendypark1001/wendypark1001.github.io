@@ -3,51 +3,51 @@ import { BarChart3, CalendarCheck, Camera, Handshake, Megaphone, Users } from "l
 export function Skills() {
   const skills = [
     {
-      category: "Event Planning & Delivery",
+      category: "Events",
       icon: CalendarCheck,
       items: [
-        "Precinct calendar scheduling & space curation",
-        "Day-of run sheet, briefing & live flow control"
+        "Precinct calendar scheduling and venue coordination",
+        "Day of run sheets, briefings and crowd flow control"
       ]
     },
     {
-      category: "Operations & Governance",
+      category: "Operations",
       icon: Handshake,
       items: [
-        "Procurement, GL code tracking & finance approvals",
-        "Attendance policy enforcement & U18 compliance"
+        "Vendor procurement, budget tracking and invoice approvals",
+        "Attendance policy and student safety compliance"
       ]
     },
     {
-      category: "Stakeholder & Team Leadership",
+      category: "Leadership",
       icon: Users,
       items: [
-        "Multi-stage recruitment, group interviews & onboarding",
-        "Shift allocations, incident resolution & feedback loops"
+        "Student Ambassador recruitment, interviews and onboarding",
+        "Rostering, shift coordination and team mentoring"
       ]
     },
     {
-      category: "Promotion & Lifecycle Marketing",
+      category: "Marketing",
       icon: Megaphone,
       items: [
-        "Segmented email campaigns & reminder workflows",
-        "Omnichannel announcements & QR code tracking"
+        "Email campaigns, newsletters and announcements",
+        "Social promotions and QR code attendance tracking"
       ]
     },
     {
-      category: "Creative Direction & Assets",
+      category: "Creative",
       icon: Camera,
       items: [
-        "Brand-aligned print collateral & digital displays",
-        "Live event documentation & recap media creation"
+        "Promotional print posters and digital screen graphics",
+        "Event photography, video documentation and recap media"
       ]
     },
     {
-      category: "Data & Community Insights",
+      category: "Community",
       icon: BarChart3,
       items: [
-        "Post-event attendance analysis & attrition tracking",
-        "Welfare follow-ups & resident experience feedback"
+        "Attendance analysis and post event participation tracking",
+        "Resident wellbeing check ins and experience surveys"
       ]
     }
   ];
