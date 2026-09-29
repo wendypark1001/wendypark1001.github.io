@@ -134,7 +134,7 @@ export function Projects() {
                 </p>
                 <div className="space-y-2 text-sm">
                   <p><span className="font-bold">Event Concepts:</span> Themed welcome celebrations, communal banquet socials, and interactive craft workshops</p>
-                  <p><span className="font-bold">Community Impact:</span> Fostering early peer connections, easing university transition, and building resident belonging</p>
+                  <p><span className="font-bold">Community Impact:</span> Supporting early peer connections, easing university transition, and building resident belonging</p>
                 </div>
               </div>
               <div className="w-full mx-auto max-w-lg">
@@ -148,7 +148,7 @@ export function Projects() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
               <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
                 <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
                   <ImageWithFallback
@@ -160,26 +160,11 @@ export function Projects() {
                 <h4 className="font-serif italic text-lg text-neutral-800">DIY Matcha Station</h4>
                 <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Interactive Student Workshop</p>
                 <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
-                  Engaging hands-on workshop station fostering relaxed, interactive peer connections over craft drinks.
+                  Engaging workshop station encouraging relaxed, friendly peer connections over craft drinks.
                 </p>
               </div>
 
               <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
-                <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
-                  <ImageWithFallback
-                    src="/assets/event-pink-party.jpg"
-                    alt="Think Pink Welcome Party photobooth strip with Scape"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <h4 className="font-serif italic text-lg text-neutral-800">Think Pink Welcome Party</h4>
-                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Scape Student Living Activation</p>
-                <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
-                  High-energy themed welcome bash featuring custom photobooth activations and community mixer spaces.
-                </p>
-              </div>
-
-              <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4 sm:col-span-2 lg:col-span-1">
                 <div className="w-full h-72 overflow-hidden rounded-lg mb-3 bg-black flex items-center justify-center">
                   <video
                     src="/assets/event-pink-party.mp4"
@@ -189,10 +174,10 @@ export function Projects() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="font-serif italic text-lg text-neutral-800">Event Highlights Reel</h4>
-                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Live Atmosphere & Engagement</p>
+                <h4 className="font-serif italic text-lg text-neutral-800">Think Pink Welcome Party</h4>
+                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Interactive Student Activation</p>
                 <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
-                  Video snapshot capturing student turnout, atmosphere, and live social interactions across the activation.
+                  High energy themed welcome celebration featuring custom photobooth activations and community mixer spaces.
                 </p>
               </div>
             </div>
