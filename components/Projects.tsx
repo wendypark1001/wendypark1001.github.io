@@ -117,7 +117,7 @@ export function Projects() {
           FEATURED WORK
         </h2>
         <p className="text-center text-sm text-neutral-600 mb-16">
-          Events planned and delivered, alongside marketing campaigns and research
+          A curated selection of event activations, brand marketing campaigns, and strategic research
         </p>
 
         {/* Event Management & Student Experience */}
