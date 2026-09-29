@@ -19,8 +19,9 @@ export function Testimonials() {
         </>
       ),
       author: "Maree Stathoulis",
-      role: "Programs and Events Coordinator",
-      organization: "University of Melbourne"
+      role: "Programs and Events Coordinator at University of Melbourne",
+      organization: "Managed Wendy directly",
+      linkedin: "https://www.linkedin.com/in/maree-stathoulis-62a3a475/"
     },
     {
       quote: (
@@ -67,8 +68,9 @@ export function Testimonials() {
         </>
       ),
       author: "John Minseok Kim",
-      role: "Senior Analyst Engineer",
-      organization: "NAB | Master of Engineering (Software with AI)"
+      role: "Senior Analyst Engineer at NAB | Master of Engineering at University of Melbourne",
+      organization: "Mentored Wendy directly",
+      linkedin: "https://www.linkedin.com/in/john-minseok-kim-2000/"
     }
   ];
 
