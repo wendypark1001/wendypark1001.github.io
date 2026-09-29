@@ -92,8 +92,7 @@ export function Skills() {
               "Webexpenses",
               "Google Workspace",
               "Canva",
-              "Instagram & Meta Suite",
-              "LinkedIn"
+              "Social Media Management"
             ].map((tool, index) => (
               <span key={index} className="px-4 py-2 bg-[#F5F1E8] text-xs uppercase tracking-wider font-medium text-neutral-700">
                 {tool}
