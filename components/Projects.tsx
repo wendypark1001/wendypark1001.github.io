@@ -123,32 +123,35 @@ export function Projects() {
         {/* Event Management & Student Experience */}
         <div className="mb-20">
           <div className="bg-white p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
-              <div>
-                <h3 className="font-serif italic text-3xl mb-4">Event Management</h3>
-                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
-                  Student Experience: Community Engagement
-                </p>
-                <p className="text-sm leading-relaxed mb-4">
-                  Designed and delivered community activations centered on connection, student wellbeing, and cultural celebration. From high energy themed welcome parties with interactive photobooths to community banquet dinners and hands on culinary stations, each event provides an open, inviting environment for students to build lasting friendships. The focus remains on turning residential spaces into supportive social hubs where every student feels at home.
-                </p>
-                <div className="space-y-2 text-sm">
-                  <p><span className="font-bold">Event Concepts:</span> Themed welcome celebrations, communal banquet socials, and interactive craft workshops</p>
-                  <p><span className="font-bold">Community Impact:</span> Supporting early peer connections, easing university transition, and building resident belonging</p>
-                </div>
-              </div>
-              <div className="w-full mx-auto max-w-lg">
-                <ImageWithFallback
-                  src="/assets/event-welcome-social.jpg"
-                  alt="USQ Welcome Social community gathering"
-                  className="w-full h-auto rounded-lg shadow-xs"
-                />
-                <p className="text-xs text-neutral-500 mt-2 text-center italic">
-                  USQ Welcome Social: Community banquet & celebration
-                </p>
+            <div className="max-w-4xl mb-12">
+              <h3 className="font-serif italic text-3xl mb-4">Event Management</h3>
+              <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                Student Experience: Community Engagement
+              </p>
+              <p className="text-sm leading-relaxed mb-6">
+                Designed and delivered community activations centered on connection, student wellbeing, and cultural celebration. From high energy themed welcome parties with custom photobooths to community banquet dinners and craft workshop stations, each event provides an open, inviting environment for students to build lasting friendships. The focus remains on turning residential spaces into supportive social hubs where every student feels at home.
+              </p>
+              <div className="space-y-2 text-sm">
+                <p><span className="font-bold">Event Concepts:</span> Themed welcome celebrations, communal banquet socials, and interactive craft workshops</p>
+                <p><span className="font-bold">Community Impact:</span> Supporting early peer connections, easing university transition, and building resident belonging</p>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+              <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
+                <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
+                  <ImageWithFallback
+                    src="/assets/event-welcome-social.jpg"
+                    alt="USQ Welcome Social community banquet and celebration"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="font-serif italic text-lg text-neutral-800">USQ Welcome Social</h4>
+                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Communal Banquet Social</p>
+                <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
+                  Welcoming banquet gathering and celebration bringing incoming students together to connect over shared meals.
+                </p>
+              </div>
+
               <div className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4">
                 <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
                   <ImageWithFallback
@@ -175,7 +178,7 @@ export function Projects() {
                   />
                 </div>
                 <h4 className="font-serif italic text-lg text-neutral-800">Think Pink Welcome Party</h4>
-                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Interactive Student Activation</p>
+                <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Themed Welcome Celebration</p>
                 <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
                   High energy themed welcome celebration featuring custom photobooth activations and community mixer spaces.
                 </p>
