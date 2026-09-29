@@ -13,13 +13,13 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Melbourne based event and student experience coordinator focused on creating welcoming spaces where students feel a genuine sense of belonging. Thoughtfully planned social mixers and creative workshops bring campus communities together with warmth and connection.
+                Wendy is a Melbourne based event and student experience coordinator dedicated to creating spaces where students feel a genuine sense of belonging. Through social mixers and creative workshops, she connects campus communities with warmth and clear purpose.
               </p>
               <p>
-                A blend of creative programming and smooth operational delivery shapes every event, from ticketing and run sheets behind the scenes to guiding student leaders on the floor. Experience facilitating university orientation and guest services at major Melbourne landmarks brings confidence in lively, people centered settings.
+                Her work pairs creative programming with smooth operational delivery. She manages ticketing and run sheets behind the scenes while supporting student leaders on the floor. With background across university orientation and visitor services at major Melbourne landmarks, she thrives in lively, people centered environments.
               </p>
               <p>
-                Backed by a Bachelor of Commerce in Marketing and Management from the University of Melbourne, each activation incorporates a strategic approach to community engagement. Fluent in English, Korean, and Central Khmer, intercultural connection sits at the core of every project.
+                Drawing on a Bachelor of Commerce in Marketing and Management from the University of Melbourne, she approaches every activation with a strategic focus on community engagement. Fluent in English, Korean, and Central Khmer, she places intercultural connection at the center of her work.
               </p>
             </div>
           </div>
