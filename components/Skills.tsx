@@ -85,14 +85,14 @@ export function Skills() {
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
               "Humanitix",
-              "Dayforce",
-              "Trello",
               "StarRez",
-              "Monday.com",
+              "Dayforce",
               "Webexpenses",
-              "Google Workspace",
+              "Monday.com",
+              "Trello",
+              "Social Media Management",
               "Canva",
-              "Social Media Management"
+              "Google Workspace"
             ].map((tool, index) => (
               <span key={index} className="px-4 py-2 bg-[#F5F1E8] text-xs uppercase tracking-wider font-medium text-neutral-700">
                 {tool}
