@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
@@ -114,18 +114,92 @@ export function Projects() {
     "/assets/MKTG20004 _ Research Report 2 FINAL-24 4.27.34 PM.jpg",
     "/assets/MKTG20004 _ Research Report 2 FINAL-25 4.27.34 PM.jpg",
   ].map(encodeAssetPath);
-  const [showFullReport, setShowFullReport] = useState(false);
-  const [showAnnotatedReport, setShowAnnotatedReport] = useState(false);
   const mgmtReportImages = Array.from({ length: 36 }, (_, index) => {
     const slideNumber = String(index + 1).padStart(2, "0");
     return encodeAssetPath(`/assets/MGMT30019 - Final Report-${slideNumber}.jpg`);
   });
-  const [showMgmtReport, setShowMgmtReport] = useState(false);
   const caseStudyImages = Array.from({ length: 44 }, (_, index) => {
     const slideNumber = String(index + 1).padStart(2, "0");
     return encodeAssetPath(`/assets/2947C81C-43C7-416F-910A-404A94BC4D4B-${slideNumber}.jpg`);
   });
-  const [showCaseStudy, setShowCaseStudy] = useState(false);
+
+  interface ResearchReportItem {
+    title: string;
+    subtitle: string;
+    description: string;
+    scope: string;
+    tools: string;
+    cover: string;
+    alt: string;
+    slides: string[];
+  }
+
+  const [activeReport, setActiveReport] = useState<ResearchReportItem | null>(null);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
+  const [viewMode, setViewMode] = useState<"slides" | "scroll">("slides");
+
+  useEffect(() => {
+    if (!activeReport) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setActiveReport(null);
+      } else if (e.key === "ArrowRight") {
+        setCurrentSlideIndex((prev) => Math.min(prev + 1, activeReport.slides.length - 1));
+      } else if (e.key === "ArrowLeft") {
+        setCurrentSlideIndex((prev) => Math.max(prev - 1, 0));
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [activeReport]);
+
+  const researchReports: ResearchReportItem[] = [
+    {
+      title: "Quantitative Research Report",
+      subtitle: "Adidas Campus Strategy",
+      description: "Led in depth desk research and quantitative analysis to define student consumer personas, map decision journeys, and evaluate the competitive landscape for Adidas campus presence. Findings informed positioning angles, messaging pillars, and a channel strategy grounded in data driven audience insights tailored to student needs.",
+      scope: "Market analysis, survey synthesis, visual storytelling",
+      tools: "SPSS, Excel, Google Docs",
+      cover: mktgReportImages[0],
+      alt: "Quantitative research report cover slide for Adidas",
+      slides: mktgReportImages,
+    },
+    {
+      title: "Qualitative Research Report",
+      subtitle: "Adidas Consumer Insights",
+      description: "Conducted in depth secondary research alongside primary interviews and focus groups to analyze Adidas current market landscape, consumer mindset, and industry movements. Insights informed strategic recommendations across positioning, channel mix, and storytelling angles tailored to emerging audience needs.",
+      scope: "Annotation, critical analysis, visual formatting",
+      tools: "SPSS, Excel, Google Docs",
+      cover: annotatedReportImages[0],
+      alt: "Qualitative research report cover slide for Adidas",
+      slides: annotatedReportImages,
+    },
+    {
+      title: "Marketing Insights Report",
+      subtitle: "News Corp Australia",
+      description: "Comprehensive marketing analysis of News Corp Australia print newspaper segment, examining market challenges, shifting consumer behaviours, and strategic opportunities to revitalise its relevance in a digital media landscape.",
+      scope: "Market performance analysis, marketing strategy evaluation, consumer insight development",
+      tools: "SPSS, Excel, Google Docs",
+      cover: caseStudyImages[0],
+      alt: "Marketing insights report cover slide for News Corp Australia",
+      slides: caseStudyImages,
+    },
+    {
+      title: "Research and Strategic Report",
+      subtitle: "Monash University Case Study",
+      description: "Delivered a strategic consulting report synthesizing market trends, competitive analysis, and stakeholder feedback into actionable recommendations for an enterprise partner. Emphasized strategic frameworks, risk assessment, and implementation planning tailored to leadership objectives.",
+      scope: "Strategic analysis, stakeholder interviews, implementation roadmap",
+      tools: "SPSS, Excel, Google Docs",
+      cover: mgmtReportImages[0],
+      alt: "Strategic report cover slide for Monash University case study",
+      slides: mgmtReportImages,
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 px-4 bg-[#F5F1E8]">
@@ -339,199 +413,198 @@ export function Projects() {
         </div>
 
 
-        {/* Projects - Research Reports */}
+        {/* Projects: Research Reports */}
         <div className="mb-20">
           <div className="bg-white p-8 md:p-12">
-            <div className="text-center mb-10">
-              <h3 className="font-serif italic text-3xl mb-2">Projects</h3>
-              <p className="text-sm uppercase tracking-wider text-[#C4A57B]">
+            <div className="max-w-4xl mb-10">
+              <h3 className="font-serif italic text-3xl mb-4">Projects</h3>
+              <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
                 Marketing Research Reports
+              </p>
+              <p className="text-sm leading-relaxed text-neutral-600">
+                In depth research initiatives combining quantitative market analysis, qualitative focus groups, and strategic frameworks to inform brand decision making.
               </p>
             </div>
 
-            <div className="space-y-12">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Quantitative Research Report - Adidas</h4>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Led in-depth desk research and quantitative analysis to define student consumer personas, map decision journeys,
-                    and evaluate the competitive landscape for Adidas&apos; campus presence.
-                  </p>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Findings informed positioning angles, messaging pillars, and a channel strategy grounded in data-backed audience insights tailored to student needs.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <p><span className="font-serif italic">Scope:</span> Market analysis, survey synthesis, visual storytelling</p>
-                    <p><span className="font-serif italic">Tools:</span> SPSS, Excel, Google Docs</p>
-                  </div>
-                  <div className="mt-6">
-                    <button
-                      type="button"
-                      className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
-                      onClick={() => setShowFullReport((prev) => !prev)}
-                    >
-                      {showFullReport ? "Hide full report" : "View full report"}
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full mx-auto max-w-lg">
-                  <ImageWithFallback
-                    src={mktgReportImages[0]}
-                    alt="MKTG20004 marketing report cover slide"
-                    className="w-full h-auto rounded-lg shadow-xs"
-                  />
-                </div>
-              </div>
-              {showFullReport && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {mktgReportImages.map((imageSrc) => (
-                    <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
-                      <ImageWithFallback
-                        src={imageSrc}
-                        alt="MKTG20004 marketing research slide"
-                        className="w-full h-full object-cover"
-                      />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+              {researchReports.map((report) => (
+                <div
+                  key={report.title}
+                  className="flex flex-col bg-[#FAF8F5] rounded-xl overflow-hidden border border-[#EADBC8]/60 p-4 sm:p-5"
+                >
+                  <div
+                    className="w-full h-60 overflow-hidden rounded-lg mb-4 bg-white border border-[#EADBC8]/40 cursor-pointer group relative"
+                    onClick={() => {
+                      setActiveReport(report);
+                      setCurrentSlideIndex(0);
+                    }}
+                  >
+                    <ImageWithFallback
+                      src={report.cover}
+                      alt={report.alt}
+                      className="w-full h-full object-cover object-top transition duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition flex items-center justify-center">
+                      <span className="opacity-0 group-hover:opacity-100 transition px-3 py-1.5 rounded-full bg-white/95 text-xs font-medium text-neutral-800 shadow-sm">
+                        Click to view report
+                      </span>
                     </div>
-                  ))}
-                </div>
-              )}
+                  </div>
 
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Qualitative Research Report - Adidas</h4>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Conducted in-depth secondary research alongside primary interviews and focus groups to analyze
-                    Adidas&apos; current market landscape, consumer mindset, and industry movements.
-                  </p>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Insights informed strategic recommendations across positioning, channel mix, and storytelling angles tailored
-                    to emerging audience needs and competitive pressures.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <p><span className="font-serif italic">Scope:</span> Annotation, critical analysis, visual formatting</p>
-                    <p><span className="font-serif italic">Tools:</span> SPSS, Excel, Google Docs</p>
-                  </div>
-                  <div className="mt-6">
-                    <button
-                      type="button"
-                      className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
-                      onClick={() => setShowAnnotatedReport((prev) => !prev)}
-                    >
-                      {showAnnotatedReport ? "Hide full report" : "View full report"}
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full mx-auto max-w-lg">
-                  <ImageWithFallback
-                    src={annotatedReportImages[0]}
-                    alt="Annotated marketing research slide"
-                    className="w-full h-auto rounded-lg shadow-xs"
-                  />
-                </div>
-              </div>
-              {showAnnotatedReport && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {annotatedReportImages.map((imageSrc) => (
-                    <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
-                      <ImageWithFallback
-                        src={imageSrc}
-                        alt="Annotated MKTG20004 slide"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
+                  <h4 className="font-serif italic text-xl text-neutral-800">{report.title}</h4>
+                  <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-1">{report.subtitle}</p>
+                  <p className="text-xs text-neutral-600 mt-3 leading-relaxed flex-1">{report.description}</p>
 
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Marketing Insights Report - News Corp Aus</h4>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Comprehensive marketing analysis of News Corp Australia’s printed newspaper segment, examining market challenges,
-                    shifting consumer behaviours, and strategic opportunities to revitalise its relevance in a digital media landscape.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <p><span className="font-serif italic">Scope:</span> Market performance analysis, marketing strategy evaluation, consumer insight development</p>
+                  <div className="mt-4 pt-3 border-t border-[#EADBC8]/50 space-y-1 text-xs text-neutral-500">
+                    <p><span className="font-bold text-neutral-700">Scope:</span> {report.scope}</p>
+                    <p><span className="font-bold text-neutral-700">Tools:</span> {report.tools}</p>
                   </div>
-                  <div className="mt-6">
-                    <button
-                      type="button"
-                      className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
-                      onClick={() => setShowCaseStudy((prev) => !prev)}
-                    >
-                      {showCaseStudy ? "Hide full report" : "View full report"}
-                    </button>
-                  </div>
-                </div>
-                <div className="w-full mx-auto max-w-lg">
-                  <ImageWithFallback
-                    src={caseStudyImages[0]}
-                    alt="Higher education case study slide"
-                    className="w-full h-auto rounded-lg shadow-xs"
-                  />
-                </div>
-              </div>
-              {showCaseStudy && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {caseStudyImages.map((imageSrc) => (
-                    <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
-                      <ImageWithFallback
-                        src={imageSrc}
-                        alt="Higher education case study slide"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
 
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h4 className="font-serif italic text-2xl mb-4">Research & Strategic Report - Higher Education: Case Study of Monash University</h4>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Delivered a strategic consulting report synthesizing market trends, competitive analysis, and stakeholder feedback
-                    into actionable recommendations for an enterprise partner.
-                  </p>
-                  <p className="text-sm leading-relaxed mb-4">
-                    Emphasized strategic frameworks, risk assessment, and implementation planning tailored to leadership objectives.
-                  </p>
-                  <div className="space-y-2 text-sm">
-                    <p><span className="font-serif italic">Scope:</span> Strategic analysis, stakeholder interviews, implementation roadmap</p>
-                  </div>
-                  <div className="mt-6">
+                  <div className="mt-4 pt-2">
                     <button
                       type="button"
-                      className="text-sm font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a]"
-                      onClick={() => setShowMgmtReport((prev) => !prev)}
+                      onClick={() => {
+                        setActiveReport(report);
+                        setCurrentSlideIndex(0);
+                      }}
+                      className="text-xs font-semibold text-[#C4A57B] underline underline-offset-4 hover:text-[#a4855a] transition cursor-pointer"
                     >
-                      {showMgmtReport ? "Hide full report" : "View full report"}
+                      View full report ({report.slides.length} pages)
                     </button>
                   </div>
                 </div>
-                <div className="w-full mx-auto max-w-lg">
-                  <ImageWithFallback
-                    src={mgmtReportImages[0]}
-                    alt="MGMT30019 strategic report cover slide"
-                    className="w-full h-auto rounded-lg shadow-xs"
-                  />
-                </div>
-              </div>
-              {showMgmtReport && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {mgmtReportImages.map((imageSrc) => (
-                    <div key={imageSrc} className="w-full overflow-hidden rounded-lg border border-[#EADBC8]">
-                      <ImageWithFallback
-                        src={imageSrc}
-                        alt="MGMT30019 strategic report slide"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
+              ))}
             </div>
           </div>
         </div>
+
+        {/* Full Report Reader Modal */}
+        {activeReport && (
+          <div
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-xs flex flex-col p-4 md:p-6"
+            onClick={() => setActiveReport(null)}
+          >
+            <div
+              className="flex items-center justify-between text-white pb-4 border-b border-white/10 shrink-0"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div>
+                <h4 className="font-serif italic text-lg md:text-xl text-white">{activeReport.title}</h4>
+                <p className="text-xs text-[#C4A57B] tracking-wider uppercase mt-0.5">{activeReport.subtitle}</p>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex items-center bg-white/10 rounded-lg p-1 text-xs">
+                  <button
+                    type="button"
+                    onClick={() => setViewMode("slides")}
+                    className={`px-2.5 py-1 rounded transition cursor-pointer ${
+                      viewMode === "slides" ? "bg-white text-neutral-900 font-medium" : "text-white/80 hover:text-white"
+                    }`}
+                  >
+                    Slide View
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setViewMode("scroll")}
+                    className={`px-2.5 py-1 rounded transition cursor-pointer ${
+                      viewMode === "scroll" ? "bg-white text-neutral-900 font-medium" : "text-white/80 hover:text-white"
+                    }`}
+                  >
+                    All Pages
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setActiveReport(null)}
+                  className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-medium text-white transition flex items-center gap-1.5 cursor-pointer"
+                  aria-label="Close report"
+                >
+                  <span>Close</span>
+                  <span className="text-base leading-none">&times;</span>
+                </button>
+              </div>
+            </div>
+
+            {viewMode === "slides" ? (
+              <div
+                className="flex-1 flex flex-col items-center justify-center min-h-0 pt-4"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="relative flex-1 flex items-center justify-center w-full min-h-0 max-h-[72vh]">
+                  <img
+                    src={activeReport.slides[currentSlideIndex]}
+                    alt={`${activeReport.title} page ${currentSlideIndex + 1}`}
+                    className="max-h-full max-w-full object-contain rounded-lg shadow-2xl bg-white"
+                  />
+
+                  {currentSlideIndex > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => setCurrentSlideIndex((prev) => Math.max(prev - 1, 0))}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/60 hover:bg-black/80 text-white transition backdrop-blur-xs cursor-pointer"
+                      aria-label="Previous page"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                  )}
+                  {currentSlideIndex < activeReport.slides.length - 1 && (
+                    <button
+                      type="button"
+                      onClick={() => setCurrentSlideIndex((prev) => Math.min(prev + 1, activeReport.slides.length - 1))}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/60 hover:bg-black/80 text-white transition backdrop-blur-xs cursor-pointer"
+                      aria-label="Next page"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  )}
+                </div>
+
+                <div className="w-full pt-3 shrink-0 flex flex-col items-center gap-2">
+                  <p className="text-xs text-neutral-400">
+                    Page {currentSlideIndex + 1} of {activeReport.slides.length}
+                  </p>
+                  <div className="flex gap-1.5 overflow-x-auto max-w-2xl py-1 px-2">
+                    {activeReport.slides.map((slideSrc, idx) => (
+                      <button
+                        key={slideSrc}
+                        type="button"
+                        onClick={() => setCurrentSlideIndex(idx)}
+                        className={`shrink-0 w-10 h-14 rounded overflow-hidden border-2 transition cursor-pointer ${
+                          idx === currentSlideIndex ? "border-[#C4A57B] scale-105" : "border-white/20 opacity-50 hover:opacity-80"
+                        }`}
+                      >
+                        <img src={slideSrc} alt="" className="w-full h-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div
+                className="flex-1 overflow-y-auto pt-6 pb-12 max-w-4xl w-full mx-auto space-y-6"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {activeReport.slides.map((slideSrc, idx) => (
+                  <div key={slideSrc} className="flex flex-col items-center">
+                    <span className="text-xs text-neutral-400 mb-2">Page {idx + 1} of {activeReport.slides.length}</span>
+                    <img
+                      src={slideSrc}
+                      alt={`${activeReport.title} page ${idx + 1}`}
+                      className="w-full h-auto rounded-lg shadow-xl bg-white"
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
 
       </div>
     </section>
