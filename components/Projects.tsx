@@ -3,34 +3,65 @@ import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function Projects() {
   const encodeAssetPath = (path: string) => encodeURI(path);
-  const ceylonGalleryImages = [
+  const scapePosters = [
     {
-      src: "/assets/milktea2.jpeg",
-      alt: "The Ceylon classic blend milk tea",
+      src: "/assets/scape-poster-1.jpg",
+      alt: "Time Budgeting Workshop and Dumplings event poster",
+      title: "Time Budgeting and Dumplings",
     },
     {
-      src: "/assets/milktea3.jpeg",
-      alt: "The Ceylon seasonal milk tea lineup",
+      src: "/assets/scape-poster-2.jpg",
+      alt: "Express Sushi Station community event poster",
+      title: "Express Sushi Station",
     },
     {
-      src: "/assets/milktea4.jpeg",
-      alt: "The Ceylon pearl milk tea close-up",
+      src: "/assets/scape-poster-3.jpg",
+      alt: "Toy Story Movie Night cinema poster",
+      title: "Movie Night",
     },
     {
-      src: "/assets/milktea5.jpeg",
-      alt: "The Ceylon promotional milk tea set",
+      src: "/assets/scape-poster-4.jpg",
+      alt: "DIY Matcha workshop event poster",
+      title: "DIY Matcha Station",
     },
-    {
-      src: "/assets/milktea6.jpeg",
-      alt: "The Ceylon signature layered milk tea",
-    },
+  ];
+  const cafePosters = [
     {
       src: "/assets/ceylon-poster-sweet-milk-bread.jpg",
       alt: "Sweet Milk Bread new bakery promotional poster",
+      title: "Sweet Milk Bread",
     },
     {
       src: "/assets/ceylon-poster-milk-cream-donuts.jpg",
       alt: "Milk Cream Donuts new bakery promotional poster",
+      title: "Milk Cream Donuts",
+    },
+    {
+      src: "/assets/milktea1.jpeg",
+      alt: "Signature Milk Teas lineup from The Ceylon",
+      title: "Signature Milk Teas",
+    },
+    {
+      src: "/assets/milktea5.jpeg",
+      alt: "Promotional milk tea lineup from The Ceylon",
+      title: "Seasonal Collection",
+    },
+  ];
+  const clientPosters = [
+    {
+      src: "/assets/mom1.jpg",
+      alt: "Custom poster commission featuring floral typography",
+      title: "Floral Typography",
+    },
+    {
+      src: "/assets/mom2.jpg",
+      alt: "Bold typographic poster with custom lettering",
+      title: "Typographic Layout",
+    },
+    {
+      src: "/assets/mom3.jpg",
+      alt: "Minimal pastel poster layout with custom lettering",
+      title: "Custom Lettering",
     },
   ];
   const mpmpGalleryImages = [
@@ -50,20 +81,6 @@ export function Projects() {
     {
       src: "/assets/uni5.JPG",
       alt: "Campus display for mentoring initiatives",
-    },
-  ];
-  const clientPosterImages = [
-    {
-      src: "/assets/mom1.jpg",
-      alt: "Custom poster commission featuring floral typography",
-    },
-    {
-      src: "/assets/mom3.jpg",
-      alt: "Minimal pastel poster layout with custom lettering",
-    },
-    {
-      src: "/assets/mom2.jpg",
-      alt: "Bold typographic poster with hand-drawn accents",
     },
   ];
   const annotatedReportImages = Array.from({ length: 43 }, (_, index) => {
@@ -187,42 +204,83 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Cafe Promotions - Featured Project */}
+        {/* Promotional Posters: Scape, Cafe, Client */}
         <div className="mb-20">
           <div className="bg-white p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
-              <div>
-                <h3 className="font-serif italic text-3xl mb-4">Cafe Promotions</h3>
-                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
-                  Brand Marketing & Social Media
-                </p>
-                <p className="text-sm leading-relaxed mb-4">
-                  Remote marketing assistant for The Ceylon, a specialty cafe in Incheon, South Korea. 
-                  Created visually engaging promotional materials and social media content to enhance 
-                  brand presence and attract customers.
-                </p>
-                <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Deliverables:</span> Social Media Posts, Promotional Posters, Brand Content</p>
-                </div>
-              </div>
-              <div className="w-full mx-auto max-w-lg">
-                <ImageWithFallback
-                  src="/assets/milktea1.jpeg"
-                  alt="Assorted Signature Milk Teas from The Ceylon"
-                  className="w-full h-auto"
-                />
+            <div className="max-w-4xl mb-10">
+              <h3 className="font-serif italic text-3xl mb-4">Promotional Posters</h3>
+              <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
+                Visual Design and Campaign Collateral
+              </p>
+              <p className="text-sm leading-relaxed text-neutral-600">
+                A curated collection of print and digital posters created across student living activations, cafe promotions, and private client commissions.
+              </p>
+            </div>
+
+            {/* Subsection 1: Scape Work */}
+            <div className="mb-10">
+              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Scape Work</h4>
+              <p className="text-xs text-neutral-500 mb-4">
+                Promotional posters designed for resident workshops, culinary stations, and community film nights.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {scapePosters.map((poster) => (
+                  <div key={poster.src} className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2">
+                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2">
+                      <ImageWithFallback
+                        src={poster.src}
+                        alt={poster.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-xs font-medium text-neutral-700 text-center truncate">{poster.title}</p>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
-              {ceylonGalleryImages.map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-3/4">
-                  <ImageWithFallback
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
+
+            {/* Subsection 2: Cafe Work */}
+            <div className="mb-10">
+              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Cafe Work</h4>
+              <p className="text-xs text-neutral-500 mb-4">
+                Promotional posters and signature campaign visuals designed for The Ceylon.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {cafePosters.map((poster) => (
+                  <div key={poster.src} className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2">
+                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2">
+                      <ImageWithFallback
+                        src={poster.src}
+                        alt={poster.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-xs font-medium text-neutral-700 text-center truncate">{poster.title}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Subsection 3: Client Promotion */}
+            <div>
+              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Client Promotion</h4>
+              <p className="text-xs text-neutral-500 mb-4">
+                Bespoke typographic and illustrative poster commissions created for private clients.
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {clientPosters.map((poster) => (
+                  <div key={poster.src} className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2">
+                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2">
+                      <ImageWithFallback
+                        src={poster.src}
+                        alt={poster.alt}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <p className="text-xs font-medium text-neutral-700 text-center truncate">{poster.title}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -280,45 +338,6 @@ export function Projects() {
           </div>
         </div>
 
-        {/* Client Posters */}
-        <div className="mb-20">
-          <div className="bg-white p-8 md:p-12">
-            <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
-              <div>
-                <h3 className="font-serif italic text-3xl mb-4">Client Posters (Korean)</h3>
-                <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
-                  Personalized Visual Storytelling
-                </p>
-                <p className="text-sm leading-relaxed mb-4">
-                  A bespoke trio of posters designed for a private commission. Each composition balances typography,
-                  illustration, and palette to create heartfelt keepsakes.
-                </p>
-                <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Scope:</span> Concept development, layout, art direction</p>
-                  <p><span className="font-serif italic">Deliverables:</span> Print-ready posters, digital files</p>
-                </div>
-              </div>
-              <div className="w-full mx-auto max-w-lg">
-                <ImageWithFallback
-                  src={clientPosterImages[0].src}
-                  alt={clientPosterImages[0].alt}
-                  className="w-full h-auto rounded-lg shadow-xs"
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {clientPosterImages.slice(1).map((image) => (
-                <div key={image.src} className="w-full overflow-hidden rounded-lg aspect-3/4">
-                  <ImageWithFallback
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Projects - Research Reports */}
         <div className="mb-20">
