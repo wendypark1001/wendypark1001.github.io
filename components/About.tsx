@@ -13,13 +13,13 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Melbourne-based event coordinator and Student Experience Coordinator at Scape Australia. My focus is on creating spaces where students genuinely feel a sense of belonging, transforming student living into vibrant, supportive communities through engaging social mixers, wellness initiatives, and hands-on creative workshops.
+                Melbourne based event and student experience coordinator. My focus is on creating welcoming spaces where students feel a genuine sense of belonging. Through social mixers and creative workshops, I bring student communities together with warmth and purpose.
               </p>
               <p>
-                I bridge the gap between creative experience design and seamless operational execution. That means taking care of everything behind the scenes, from vendor partnerships, event run sheets, and ticketing systems to mentoring student leaders and capturing live photo and video content. Having also facilitated university orientation programs and visitor experiences at iconic Melbourne landmarks, I thrive in fast-paced, high-energy settings.
+                I balance creative programming with smooth operational delivery. That means managing ticketing and run sheets behind the scenes while guiding student leaders on the floor. Having supported university orientation and guest services at major Melbourne landmarks, I thrive in lively, people centered settings.
               </p>
               <p>
-                With a Bachelor of Commerce in Marketing and Management from the University of Melbourne, I approach every activation with a strategic lens, knowing how to build genuine excitement and community buy-in. Fluent in English, Korean, and Central Khmer, cross-cultural empathy and inclusivity sit at the heart of everything I create.
+                Backed by a Bachelor of Commerce in Marketing and Management from the University of Melbourne, I plan each activation with a strategic approach to community engagement. Fluent in English, Korean, and Central Khmer, intercultural connection sits at the center of my work.
               </p>
             </div>
           </div>
