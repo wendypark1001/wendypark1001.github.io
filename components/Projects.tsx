@@ -27,23 +27,23 @@ export function Projects() {
   ];
   const cafePosters = [
     {
-      src: "/assets/ceylon-poster-sweet-milk-bread.jpg",
-      alt: "Sweet Milk Bread new bakery promotional poster",
-      title: "Sweet Milk Bread",
+      src: "/assets/milktea2.jpeg",
+      alt: "Fresh baked cream cheese scone promotional poster",
+      title: "Fresh Baked Scones",
     },
     {
-      src: "/assets/ceylon-poster-milk-cream-donuts.jpg",
-      alt: "Milk Cream Donuts new bakery promotional poster",
-      title: "Milk Cream Donuts",
+      src: "/assets/milktea4.jpeg",
+      alt: "Specialty premium coffee promotional poster",
+      title: "Specialty Coffee",
     },
     {
       src: "/assets/milktea1.jpeg",
-      alt: "Signature Milk Teas lineup from The Ceylon",
-      title: "Signature Milk Teas",
+      alt: "Signature milk tea promotional poster",
+      title: "Signature Milk Tea",
     },
     {
       src: "/assets/milktea5.jpeg",
-      alt: "Promotional milk tea lineup from The Ceylon",
+      alt: "Seasonal cream cheese donut promotional poster",
       title: "Seasonal Collection",
     },
   ];
@@ -213,13 +213,13 @@ export function Projects() {
                 Visual Design and Campaign Collateral
               </p>
               <p className="text-sm leading-relaxed text-neutral-600">
-                A showcase of print and digital posters designed across student living activations, cafe promotions, and private client commissions.
+                A showcase of print and digital posters designed across student living activations, hospitality brand campaigns, and private client commissions.
               </p>
             </div>
 
-            {/* Subsection 1: Scape Work */}
+            {/* Subsection 1: Student Living Activations */}
             <div className="mb-10">
-              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Scape Work</h4>
+              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Student Living Activations</h4>
               <p className="text-xs text-neutral-500 mb-4">
                 Promotional posters designed for resident workshops, culinary stations, and community film nights.
               </p>
@@ -239,11 +239,11 @@ export function Projects() {
               </div>
             </div>
 
-            {/* Subsection 2: Cafe Work */}
+            {/* Subsection 2: Hospitality Brand Campaigns */}
             <div className="mb-10">
-              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Cafe Work</h4>
+              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Hospitality Brand Campaigns</h4>
               <p className="text-xs text-neutral-500 mb-4">
-                Promotional posters and signature campaign visuals designed for The Ceylon.
+                Promotional posters and signature campaign visuals designed for artisanal cafe and bakery menus.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {cafePosters.map((poster) => (
@@ -261,9 +261,9 @@ export function Projects() {
               </div>
             </div>
 
-            {/* Subsection 3: Client Promotion */}
+            {/* Subsection 3: Private Client Commissions */}
             <div>
-              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Client Promotion</h4>
+              <h4 className="font-serif italic text-xl mb-1 text-neutral-800">Private Client Commissions</h4>
               <p className="text-xs text-neutral-500 mb-4">
                 Bespoke typographic and illustrative poster commissions created for private clients.
               </p>
