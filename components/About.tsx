@@ -13,16 +13,13 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Melbourne-based event coordinator, currently Student Experience Coordinator at Scape Australia. The role covers
-                20-30 events a month across 5 buildings, from vendors, budgets and ticketing to leading a team of 40+ Student Ambassadors.
+                Melbourne-based event coordinator and Student Experience Coordinator at Scape Australia. My focus is on creating spaces where students genuinely feel a sense of belonging, transforming student living into vibrant, supportive communities through engaging social mixers, wellness initiatives, and hands-on creative workshops.
               </p>
               <p>
-                Previously helped facilitate Orientation Week for 6,000+ new students and trained 900+ peer mentors at the
-                University of Melbourne, alongside hosting guests at Melbourne Skydeck, which welcomes over 700 visitors a day.
+                I bridge the gap between creative experience design and seamless operational execution. That means taking care of everything behind the scenes, from vendor partnerships, event run sheets, and ticketing systems to mentoring student leaders and capturing live photo and video content. Having also facilitated university orientation programs and visitor experiences at iconic Melbourne landmarks, I thrive in fast-paced, high-energy settings.
               </p>
               <p>
-                A Bachelor of Commerce in Marketing & Management from the University of Melbourne adds the skills to promote each event, not just run it.
-                Fluent in English, Korean and Khmer, with cultural sensitivity at the heart of every community.
+                With a Bachelor of Commerce in Marketing and Management from the University of Melbourne, I approach every activation with a strategic lens, knowing how to build genuine excitement and community buy-in. Fluent in English, Korean, and Central Khmer, cross-cultural empathy and inclusivity sit at the heart of everything I create.
               </p>
             </div>
           </div>
