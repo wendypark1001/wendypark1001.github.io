@@ -213,7 +213,7 @@ export function Projects() {
                 Visual Design and Campaign Collateral
               </p>
               <p className="text-sm leading-relaxed text-neutral-600">
-                A curated collection of print and digital posters created across student living activations, cafe promotions, and private client commissions.
+                A showcase of print and digital posters designed across student living activations, cafe promotions, and private client commissions.
               </p>
             </div>
 
