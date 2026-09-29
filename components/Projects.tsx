@@ -133,10 +133,8 @@ export function Projects() {
                   Designed and delivered community activations centered on connection, student wellbeing, and cultural celebration. From high energy themed welcome parties with interactive photobooths to community banquet dinners and hands on culinary stations, each event provides an open, inviting environment for students to build lasting friendships. The focus remains on turning residential spaces into supportive social hubs where every student feels at home.
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Event Concepts:</span> Themed welcome celebrations, communal banquet socials, and interactive craft workshops</p>
-                  <p><span className="font-serif italic">Community Impact:</span> Fostering early peer connections, easing university transition, and building resident belonging</p>
-                  <p><span className="font-serif italic">Key Activations:</span> Think Pink Welcome Party, USQ Welcome Social, DIY Matcha Station</p>
-                  <p><span className="font-serif italic">Production Highlights:</span> Immersive spatial styling, photobooth design, live music curation, and recap videography</p>
+                  <p><span className="font-bold">Event Concepts:</span> Themed welcome celebrations, communal banquet socials, and interactive craft workshops</p>
+                  <p><span className="font-bold">Community Impact:</span> Fostering early peer connections, easing university transition, and building resident belonging</p>
                 </div>
               </div>
               <div className="w-full mx-auto max-w-lg">
