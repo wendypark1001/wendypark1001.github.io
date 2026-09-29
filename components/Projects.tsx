@@ -141,11 +141,11 @@ export function Projects() {
                 <div className="w-full h-72 overflow-hidden rounded-lg mb-3">
                   <ImageWithFallback
                     src="/assets/event-welcome-social.jpg"
-                    alt="USQ Welcome Social community banquet and celebration"
+                    alt="Christmas in July Welcome Social community banquet and celebration"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h4 className="font-serif italic text-lg text-neutral-800">USQ Welcome Social</h4>
+                <h4 className="font-serif italic text-lg text-neutral-800">Christmas in July Welcome Social</h4>
                 <p className="text-xs uppercase tracking-wider text-[#C4A57B] mt-0.5">Communal Banquet Social</p>
                 <p className="text-xs text-neutral-600 mt-2 leading-relaxed">
                   Welcoming banquet gathering and celebration bringing incoming students together to connect over shared meals.
