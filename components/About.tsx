@@ -13,13 +13,13 @@ export function About() {
             </h2>
             <div className="space-y-4 text-sm leading-relaxed">
               <p>
-                Melbourne based event and student experience coordinator. My focus is on creating welcoming spaces where students feel a genuine sense of belonging. Through social mixers and creative workshops, I bring student communities together with warmth and purpose.
+                Melbourne based event and student experience coordinator focused on creating welcoming spaces where students feel a genuine sense of belonging. Thoughtfully planned social mixers and creative workshops bring campus communities together with warmth and connection.
               </p>
               <p>
-                I balance creative programming with smooth operational delivery. That means managing ticketing and run sheets behind the scenes while guiding student leaders on the floor. Having supported university orientation and guest services at major Melbourne landmarks, I thrive in lively, people centered settings.
+                A blend of creative programming and smooth operational delivery shapes every event, from ticketing and run sheets behind the scenes to guiding student leaders on the floor. Experience facilitating university orientation and guest services at major Melbourne landmarks brings confidence in lively, people centered settings.
               </p>
               <p>
-                Backed by a Bachelor of Commerce in Marketing and Management from the University of Melbourne, I plan each activation with a strategic approach to community engagement. Fluent in English, Korean, and Central Khmer, intercultural connection sits at the center of my work.
+                Backed by a Bachelor of Commerce in Marketing and Management from the University of Melbourne, each activation incorporates a strategic approach to community engagement. Fluent in English, Korean, and Central Khmer, intercultural connection sits at the core of every project.
               </p>
             </div>
           </div>
