@@ -92,6 +92,7 @@ export function Skills() {
               "Trello",
               "Social Media Management",
               "Canva",
+              "Microsoft Excel",
               "Google Workspace"
             ].map((tool, index) => (
               <span key={index} className="px-4 py-2 bg-[#F5F1E8] text-xs uppercase tracking-wider font-medium text-neutral-700">
