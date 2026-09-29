@@ -9,6 +9,11 @@ export function SocialMedia() {
       number: "108",
       label: "Profile Viewers",
       description: "Past 90 days"
+    },
+    {
+      number: "500+",
+      label: "Professional Network",
+      description: "Industry and campus peers"
     }
   ];
 
@@ -22,7 +27,7 @@ export function SocialMedia() {
           Building meaningful connections through strategic content
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center flex flex-col items-center">
               <div className="font-serif italic mb-2" style={{ fontSize: '3rem', color: '#C4A57B' }}>
