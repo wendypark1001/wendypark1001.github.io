@@ -130,15 +130,13 @@ export function Projects() {
                   Student Experience: Community Engagement
                 </p>
                 <p className="text-sm leading-relaxed mb-4">
-                  An average of 20-30 events a month across 5 Scape buildings in Melbourne, delivered as Student Experience
-                  Coordinator at Scape Australia, including large-scale events of 200-300 attendees. From interactive DIY
-                  stations and themed welcome celebrations to large-scale social mixers, every event is built to foster belonging.
+                  Designed and delivered community activations centered on connection, student wellbeing, and cultural celebration. From high energy themed welcome parties with interactive photobooths to community banquet dinners and hands on culinary stations, each event provides an open, inviting environment for students to build lasting friendships. The focus remains on turning residential spaces into supportive social hubs where every student feels at home.
                 </p>
                 <div className="space-y-2 text-sm">
-                  <p><span className="font-serif italic">Scale:</span> 20-30 events a month, 200-300 attendees at flagship events, 40+ Student Ambassadors</p>
-                  <p><span className="font-serif italic">Responsibilities:</span> Vendor onboarding, budgeting, ticketing, ambassador recruitment, training & rostering</p>
-                  <p><span className="font-serif italic">Key Events:</span> Think Pink Welcome Party, USQ Welcome Social, DIY Matcha Station</p>
-                  <p><span className="font-serif italic">Deliverables:</span> Event Planning & Execution, Community Facilitation, Photo & Video Content</p>
+                  <p><span className="font-serif italic">Event Concepts:</span> Themed welcome celebrations, communal banquet socials, and interactive craft workshops</p>
+                  <p><span className="font-serif italic">Community Impact:</span> Fostering early peer connections, easing university transition, and building resident belonging</p>
+                  <p><span className="font-serif italic">Key Activations:</span> Think Pink Welcome Party, USQ Welcome Social, DIY Matcha Station</p>
+                  <p><span className="font-serif italic">Production Highlights:</span> Immersive spatial styling, photobooth design, live music curation, and recap videography</p>
                 </div>
               </div>
               <div className="w-full mx-auto max-w-lg">
