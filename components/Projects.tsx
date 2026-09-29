@@ -125,9 +125,9 @@ export function Projects() {
           <div className="bg-white p-8 md:p-12">
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <div>
-                <h3 className="font-serif italic text-3xl mb-4">Event Management & Student Experience</h3>
+                <h3 className="font-serif italic text-3xl mb-4">Event Management</h3>
                 <p className="text-sm uppercase tracking-wider text-[#C4A57B] mb-4">
-                  Community Engagement & Campus Activations
+                  Student Experience: Community Engagement
                 </p>
                 <p className="text-sm leading-relaxed mb-4">
                   An average of 20-30 events a month across 5 Scape buildings in Melbourne, delivered as Student Experience
