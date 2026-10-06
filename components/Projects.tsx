@@ -134,19 +134,55 @@ export function Projects() {
     slides: string[];
   }
 
+  interface PosterItem {
+    src: string;
+    alt: string;
+    title: string;
+  }
+
   const [activeReport, setActiveReport] = useState<ResearchReportItem | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [viewMode, setViewMode] = useState<"slides" | "scroll">("slides");
 
+  const [activePoster, setActivePoster] = useState<PosterItem | null>(null);
+  const [activePosterList, setActivePosterList] = useState<PosterItem[]>([]);
+  const [activePosterIndex, setActivePosterIndex] = useState(0);
+  const [activePosterCategory, setActivePosterCategory] = useState("");
+
+  const openPoster = (poster: PosterItem, list: PosterItem[], category: string) => {
+    setActivePoster(poster);
+    setActivePosterList(list);
+    const idx = list.findIndex((p) => p.src === poster.src);
+    setActivePosterIndex(idx >= 0 ? idx : 0);
+    setActivePosterCategory(category);
+  };
+
   useEffect(() => {
-    if (!activeReport) return;
+    if (!activeReport && !activePoster) return;
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setActiveReport(null);
+        setActivePoster(null);
       } else if (e.key === "ArrowRight") {
-        setCurrentSlideIndex((prev) => Math.min(prev + 1, activeReport.slides.length - 1));
+        if (activeReport) {
+          setCurrentSlideIndex((prev) => Math.min(prev + 1, activeReport.slides.length - 1));
+        } else if (activePoster && activePosterList.length > 1) {
+          setActivePosterIndex((prev) => {
+            const nextIdx = Math.min(prev + 1, activePosterList.length - 1);
+            setActivePoster(activePosterList[nextIdx]);
+            return nextIdx;
+          });
+        }
       } else if (e.key === "ArrowLeft") {
-        setCurrentSlideIndex((prev) => Math.max(prev - 1, 0));
+        if (activeReport) {
+          setCurrentSlideIndex((prev) => Math.max(prev - 1, 0));
+        } else if (activePoster && activePosterList.length > 1) {
+          setActivePosterIndex((prev) => {
+            const nextIdx = Math.max(prev - 1, 0);
+            setActivePoster(activePosterList[nextIdx]);
+            return nextIdx;
+          });
+        }
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -156,7 +192,7 @@ export function Projects() {
       window.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = originalOverflow;
     };
-  }, [activeReport]);
+  }, [activeReport, activePoster, activePosterList]);
 
   const researchReports: ResearchReportItem[] = [
     {
@@ -299,13 +335,22 @@ export function Projects() {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {scapePosters.map((poster) => (
-                  <div key={poster.src} className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2">
-                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2">
+                  <div
+                    key={poster.src}
+                    onClick={() => openPoster(poster, scapePosters, "Student Living Activations")}
+                    className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2 cursor-pointer group hover:border-[#C4A57B] transition duration-200"
+                  >
+                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2 relative">
                       <ImageWithFallback
                         src={poster.src}
                         alt={poster.alt}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 transition px-2.5 py-1 rounded-full bg-white/95 text-[11px] font-medium text-neutral-800 shadow-sm">
+                          Click to zoom
+                        </span>
+                      </div>
                     </div>
                     <p className="text-xs font-medium text-neutral-700 text-center truncate">{poster.title}</p>
                   </div>
@@ -321,13 +366,22 @@ export function Projects() {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {cafePosters.map((poster) => (
-                  <div key={poster.src} className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2">
-                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2">
+                  <div
+                    key={poster.src}
+                    onClick={() => openPoster(poster, cafePosters, "Hospitality Brand Campaigns")}
+                    className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2 cursor-pointer group hover:border-[#C4A57B] transition duration-200"
+                  >
+                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2 relative">
                       <ImageWithFallback
                         src={poster.src}
                         alt={poster.alt}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 transition px-2.5 py-1 rounded-full bg-white/95 text-[11px] font-medium text-neutral-800 shadow-sm">
+                          Click to zoom
+                        </span>
+                      </div>
                     </div>
                     <p className="text-xs font-medium text-neutral-700 text-center truncate">{poster.title}</p>
                   </div>
@@ -343,13 +397,22 @@ export function Projects() {
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                 {clientPosters.map((poster) => (
-                  <div key={poster.src} className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2">
-                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2">
+                  <div
+                    key={poster.src}
+                    onClick={() => openPoster(poster, clientPosters, "Private Client Commissions")}
+                    className="flex flex-col bg-[#FAF8F5] rounded-lg overflow-hidden border border-[#EADBC8]/60 p-2 cursor-pointer group hover:border-[#C4A57B] transition duration-200"
+                  >
+                    <div className="w-full overflow-hidden rounded aspect-[3/4] mb-2 relative">
                       <ImageWithFallback
                         src={poster.src}
                         alt={poster.alt}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
                       />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 transition px-2.5 py-1 rounded-full bg-white/95 text-[11px] font-medium text-neutral-800 shadow-sm">
+                          Click to zoom
+                        </span>
+                      </div>
                     </div>
                     <p className="text-xs font-medium text-neutral-700 text-center truncate">{poster.title}</p>
                   </div>
@@ -603,6 +666,110 @@ export function Projects() {
                 ))}
               </div>
             )}
+          </div>
+        )}
+
+        {/* Full Poster Zoom Modal */}
+        {activePoster && (
+          <div
+            className="fixed inset-0 z-50 bg-black/85 backdrop-blur-xs flex flex-col p-4 md:p-6"
+            onClick={() => setActivePoster(null)}
+          >
+            <div
+              className="flex items-center justify-between text-white pb-4 border-b border-white/10 shrink-0"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div>
+                <h4 className="font-serif italic text-lg md:text-xl text-white">{activePoster.title}</h4>
+                <p className="text-xs text-[#C4A57B] tracking-wider uppercase mt-0.5">
+                  {activePosterCategory || "Promotional Poster"}
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => setActivePoster(null)}
+                className="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-medium text-white transition flex items-center gap-1.5 cursor-pointer"
+                aria-label="Close poster"
+              >
+                <span>Close</span>
+                <span className="text-base leading-none">&times;</span>
+              </button>
+            </div>
+
+            <div
+              className="flex-1 flex flex-col items-center justify-center min-h-0 pt-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative flex-1 flex items-center justify-center w-full min-h-0 max-h-[78vh]">
+                <img
+                  src={activePoster.src}
+                  alt={activePoster.alt}
+                  className="max-h-full max-w-full object-contain rounded-lg shadow-2xl bg-white"
+                />
+
+                {activePosterList && activePosterIndex > 0 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const nextIdx = activePosterIndex - 1;
+                      setActivePosterIndex(nextIdx);
+                      setActivePoster(activePosterList[nextIdx]);
+                    }}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/60 hover:bg-black/80 text-white transition backdrop-blur-xs cursor-pointer"
+                    aria-label="Previous poster"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                )}
+
+                {activePosterList && activePosterIndex < activePosterList.length - 1 && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const nextIdx = activePosterIndex + 1;
+                      setActivePosterIndex(nextIdx);
+                      setActivePoster(activePosterList[nextIdx]);
+                    }}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/60 hover:bg-black/80 text-white transition backdrop-blur-xs cursor-pointer"
+                    aria-label="Next poster"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+
+              {activePosterList && activePosterList.length > 1 && (
+                <div className="w-full pt-3 shrink-0 flex flex-col items-center gap-1.5">
+                  <p className="text-xs text-neutral-400">
+                    Poster {activePosterIndex + 1} of {activePosterList.length}
+                  </p>
+                  <div className="flex gap-2 overflow-x-auto max-w-xl py-1 px-2">
+                    {activePosterList.map((posterItem, idx) => (
+                      <button
+                        key={posterItem.src}
+                        type="button"
+                        onClick={() => {
+                          setActivePosterIndex(idx);
+                          setActivePoster(posterItem);
+                        }}
+                        className={`shrink-0 w-9 h-12 rounded overflow-hidden border-2 transition cursor-pointer ${
+                          idx === activePosterIndex
+                            ? "border-[#C4A57B] scale-105"
+                            : "border-white/20 opacity-50 hover:opacity-80"
+                        }`}
+                      >
+                        <img src={posterItem.src} alt="" className="w-full h-full object-cover" />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         )}
 
